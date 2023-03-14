@@ -1,0 +1,33 @@
+---
+const pathname = new URL(Astro.request.url).pathname
+const currentPath = pathname.slice(1)
+
+const links = ['about', 'articles', 'now', 'uses']
+---
+
+<nav class='grid gap-4 grid-cols-2 p-5 max-w-4xl m-auto'>
+  <div class='font-bold text-xl my-auto'>Will Adams</div>
+  <ul class=''>
+    <li class='inline-flex mx-1'>
+      <a
+        class={`capitalize btn btn-ghost ${
+          currentPath === '' ? 'btn-active' : ''
+        }`}
+        href='/'>home</a
+      >
+    </li>{
+      links.map((link) => (
+        <li class='inline-flex mx-1'>
+          <a
+            class={`capitalize btn btn-ghost ${
+              currentPath === link ? 'btn-active' : ''
+            }`}
+            href={`/${link}`}
+          >
+            {link}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
