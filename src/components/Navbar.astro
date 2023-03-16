@@ -5,13 +5,14 @@ const currentPath = pathname.slice(1)
 const links = ['about', 'articles', 'now', 'uses']
 ---
 
-<nav class='grid gap-4 grid-cols-2 p-5 max-w-4xl m-auto'>
-  <div class='font-bold text-xl my-auto'>Will Adams</div>
+<nav class=''>
   <ul class=''>
     <li class='inline-flex mx-1'>
       <a
         class={`capitalize btn btn-ghost ${
-          currentPath === '' ? 'btn-active' : ''
+          currentPath === ''
+            ? 'btn-outline hover:bg-transparent hover:text-current'
+            : ''
         }`}
         href='/'>home</a
       >
@@ -20,7 +21,9 @@ const links = ['about', 'articles', 'now', 'uses']
         <li class='inline-flex mx-1'>
           <a
             class={`capitalize btn btn-ghost ${
-              currentPath === link ? 'btn-active' : ''
+              currentPath === link
+                ? 'btn-outline hover:bg-transparent hover:text-current'
+                : ''
             }`}
             href={`/${link}`}
           >
