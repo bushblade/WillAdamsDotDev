@@ -1,7 +1,90 @@
 ---
 import Layout from '@layouts/Layout.astro'
+import ProjectCard from '@components/ProjectCard.astro'
+
+const tech = {
+  typeScript: {
+    url: 'https://www.typescriptlang.org/',
+    text: 'TypeScript',
+  },
+  gatsby: {
+    url: 'https://www.gatsbyjs.com/',
+    text: 'Gatsby',
+  },
+  astro: {
+    url: 'https://astro.build',
+    text: 'Astro',
+  },
+  styledComponents: {
+    url: 'https://styled-components.com/',
+    text: 'Styled Components',
+  },
+  reactSpring: {
+    url: 'https://www.react-spring.dev/',
+    text: 'React Spring',
+  },
+  vite: {
+    url: 'https://vitejs.dev/',
+    text: 'Vite',
+  },
+  netlify: {
+    url: 'https://netlify.com',
+    text: 'Netlify',
+  },
+  tailwind: {
+    url: 'https://tailwindcss.com/',
+    text: 'TailwindCSS',
+  },
+  react: {
+    url: 'https://react.dev/',
+    text: 'React',
+  },
+}
 ---
 
-<Layout title="What I'm doing now">
-  <h1>Some of my projects</h1>
+<Layout title='Projects'>
+  <h1>Some stuff built by <span class='text-primary'>Me</span></h1>
+  <ProjectCard
+    url='https://bushblade.co.uk'
+    title='Bushblade Knives'
+    repo='https://github.com/bushblade/bushblade-knives-website'
+    tech={[tech.gatsby, tech.styledComponents, tech.netlify, tech.reactSpring]}
+  >
+    Created out of a need for a site to showcase my work as a Knife Maker and
+    the trigger to my web development journey. The site has undergone many
+    iterations over the years but is currenlty built using Gatsby and Styled
+    Components, animations with React Spring and continuous deployment to
+    Netlify through GitHub.
+  </ProjectCard>
+
+  <ProjectCard
+    url='https://www.npmjs.com/package/react-touch-drag-slider'
+    title='react-touch-drag-slider'
+    repo='https://github.com/bushblade/react-touch-drag-slider'
+    tech={[tech.react, tech.vite, tech.typeScript]}
+  >
+    A touch friendly slider component for React with zero dependencies,
+    originally made for Bushblade Knives but I decied to publish to the npm
+    registry. Written in TypeScript and developed in Vite library mode.
+  </ProjectCard>
+
+  <ProjectCard
+    url='https://www.westyorkshirebushcraft.co.uk/'
+    title='West Yorkshire Bushcraft'
+    repo='https://github.com/bushblade/WYB'
+    tech={[tech.gatsby, tech.reactSpring, tech.netlify]}
+  >
+    Built for my Bushcraft group to show the sort of things we get up to and
+    help people find us. Built using Gatsby and Styled Components, animations
+    with React Spring and continuous deployment to Netlify through GitHub.
+  </ProjectCard>
+  <ProjectCard
+    url='/'
+    title='This site!'
+    repo='https://github.com/bushblade/WillAdamsDotDev'
+    tech={[tech.astro, tech.typeScript, tech.tailwind]}
+  >
+    This site you're looking at now - Built with Astro, TypeScript and
+    TailwindCSS.
+  </ProjectCard>
 </Layout>
