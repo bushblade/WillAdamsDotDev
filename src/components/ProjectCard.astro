@@ -1,0 +1,41 @@
+---
+export interface Tech {
+  url: string
+  text: string
+}
+
+export interface Props {
+  title: string
+  url: string
+  repo: string
+  tech: Tech[]
+}
+
+const { title, url, repo, tech } = Astro.props
+---
+
+<article
+  class='mb-10 border-secondary-content border-l-4 px-4 pb-10 bg-base-300 rounded'
+>
+  <a href={url} target='_blank' class='link link-hover'>
+    <h3 class=''>{title}</h3>
+  </a>
+  <p><slot /></p>
+  <a href={repo} target='_blank' class='link link-accent link-hover'
+    >Repository link</a
+  >
+  <h4>Tech stack used</h4>
+  <div>
+    {
+      tech.map(({ url, text }) => (
+        <a
+          href={url}
+          target='_blank'
+          class='badge badge-info gap-2 no-underline mx-1 hover:animate-pulse'
+        >
+          {text}
+        </a>
+      ))
+    }
+  </div>
+</article>
