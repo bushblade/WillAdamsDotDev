@@ -9,16 +9,32 @@ export interface Props {
   url: string
   repo: string
   tech: Tech[]
+  image?: string
 }
 
-const { title, url, repo, tech } = Astro.props
+const { title, url, repo, tech, image } = Astro.props
 ---
 
-<article class='mb-10 px-4 pb-10 bg-base-300 rounded'>
-  <a href={url} target='_blank' class='link link-hover'>
-    <h3 class=''>{title}</h3>
-  </a>
-  <p><slot /></p>
+<article
+  class='mb-10 px-4 pb-10 bg-base-300 rounded border-top border-t-4 border-primary'
+>
+  <div class={`grid grid-cols-1 ${image ? 'md:grid-cols-2' : ''} gap-4`}>
+    <div>
+      <a href={url} target='_blank' class='link link-hover'>
+        <h3 class=''>{title}</h3>
+      </a>
+      <p><slot /></p>
+    </div>
+    {
+      image ? (
+        <div class='flex items-center justify-center'>
+          <a href={url} target='_blank'>
+            <img src={image} alt={title} class='rounded' />
+          </a>
+        </div>
+      ) : null
+    }
+  </div>
   <a href={repo} target='_blank' class='link link-accent link-hover'
     >Repository link</a
   >
