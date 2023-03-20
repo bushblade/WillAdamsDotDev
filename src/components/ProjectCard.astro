@@ -14,9 +14,7 @@ export interface Props {
 const { title, url, repo, tech } = Astro.props
 ---
 
-<article
-  class='mb-10 border-secondary-content border-l-4 px-4 pb-10 bg-base-300 rounded'
->
+<article class='mb-10 px-4 pb-10 bg-base-300 rounded'>
   <a href={url} target='_blank' class='link link-hover'>
     <h3 class=''>{title}</h3>
   </a>
@@ -31,7 +29,7 @@ const { title, url, repo, tech } = Astro.props
         <a
           href={url}
           target='_blank'
-          class='badge badge-outline badge-secondary no-underline m-1 hover:animate-pulse'
+          class='badge badge-outline badge-info no-underline m-1 hover:animate-pulse'
         >
           {text}
         </a>
