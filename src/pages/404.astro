@@ -1,0 +1,17 @@
+---
+import Layout from '@layouts/Layout.astro'
+---
+
+<Layout title='Oops! - 404'>
+  <div
+    class='rounded flex flex-col items-center bg-base-300 border-2 border-error-content py-20'
+  >
+    <h1 class='text-5xl text-center'>
+      Oops - that's a <span class='text-info'>404</span>
+    </h1>
+    <p class='text-xl mb-8 text-center'>
+      The page you are looking for doesn't exist.
+    </p>
+    <a href='/' class='btn btn-warning'>Take me home!</a>
+  </div>
+</Layout>
