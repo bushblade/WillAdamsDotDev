@@ -21,7 +21,7 @@ const links = ['about', 'projects', 'uses']
         <li class='inline-flex mx-1'>
           <a
             class={`capitalize btn btn-ghost ${
-              currentPath === link
+              currentPath.includes(link)
                 ? 'btn-outline hover:bg-transparent hover:text-current'
                 : ''
             }`}
