@@ -22,7 +22,12 @@ const { title, metaDescription, metaImage } = Astro.props
         <meta property='og:description' content={metaDescription} />
       ) : null
     }
-    {metaImage ? <meta property='og:image' content={metaImage} /> : null}
+    <meta
+      property='og:image'
+      content={metaImage
+        ? metaImage
+        : 'https://res.cloudinary.com/bushblade/image/upload/c_scale,w_400/f_webp/bushbladedotdev/indexMetaImage.jpg'}
+    />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <link rel='preconnect' href='https://fonts.googleapis.com' />
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
