@@ -24,6 +24,12 @@ const { title, metaDescription, metaImage } = Astro.props
         : 'UK based developer and knife maker'}
     />
     <meta
+      name='description'
+      content={metaDescription
+        ? metaDescription
+        : 'UK based developer and knife maker'}
+    />
+    <meta
       property='og:image'
       content={metaImage
         ? metaImage
