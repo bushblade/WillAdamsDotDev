@@ -21,7 +21,7 @@ const { title, url, repo, tech, image } = Astro.props
   <div class={`grid grid-cols-1 ${image ? 'md:grid-cols-2' : ''} gap-4`}>
     <div>
       <a href={url} target='_blank' class='link link-hover'>
-        <h3 class=''>{title}</h3>
+        <h2 class=''>{title}</h2>
       </a>
       <p><slot /></p>
     </div>
@@ -38,7 +38,7 @@ const { title, url, repo, tech, image } = Astro.props
   <a href={repo} target='_blank' class='link link-accent link-hover'
     >Repository link</a
   >
-  <h4>Tech stack used</h4>
+  <h3>Tech stack used</h4>
   <div>
     {
       tech.map(({ url, text }) => (
