@@ -38,14 +38,15 @@ const { title, url, repo, tech, image } = Astro.props
   <a href={repo} target='_blank' class='link link-accent link-hover'
     >Repository link</a
   >
-  <h3>Tech stack used</h4>
+  <h3>Tech stack used</h3>
   <div>
     {
       tech.map(({ url, text }) => (
         <a
           href={url}
           target='_blank'
-          class='badge badge-outline badge-info no-underline m-1 hover:animate-pulse'
+          class='badge badge-outline badge-info no-underline m-1 hover:text-info
+          hover:animate-pulse'
         >
           {text}
         </a>
