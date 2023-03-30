@@ -29,7 +29,12 @@ const { title, url, repo, tech, image } = Astro.props
       image ? (
         <div class='flex items-center justify-center'>
           <a href={url} target='_blank'>
-            <img src={image} alt={title} class='rounded' />
+            <img
+              src={image}
+              alt={title}
+              class='rounded outline outline-secondary-content outline-offset-0 hover:outline-offset-4 outline-2
+              hover:outline-secondary transition-all'
+            />
           </a>
         </div>
       ) : null
