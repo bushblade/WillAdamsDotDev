@@ -47,7 +47,9 @@ const { title, metaDescription, metaImage } = Astro.props
   </head>
   <body class='min-h-screen font-fira'>
     <Header />
-    <main class='max-w-4xl grid m-auto prose lg:p-0 p-4 min-h-[30vh]'>
+    <main
+      class='max-w-4xl grid m-auto prose prose-a:link-accent lg:p-0 p-4 min-h-[30vh]'
+    >
       <slot />
     </main>
     <Footer />
