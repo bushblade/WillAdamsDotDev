@@ -25,7 +25,5 @@ const { frontmatter } = Astro.props
   metaDescription={frontmatter.description}
   metaImage={frontmatter.image.url}
 >
-  <div class='prose-a:link-accent prose-img:rounded'>
-    <slot />
-  </div>
+  <slot />
 </Layout>
