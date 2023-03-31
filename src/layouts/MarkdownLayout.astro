@@ -6,7 +6,7 @@ export interface PostFrontmatter {
   pubDate: string
   description: string
   author: string
-  image: {
+  image?: {
     url: string
     alt: string
   }
@@ -23,7 +23,8 @@ const { frontmatter } = Astro.props
 <Layout
   title={frontmatter.title}
   metaDescription={frontmatter.description}
-  metaImage={frontmatter.image.url}
+  metaImage={frontmatter.image?.url}
 >
+  <h1>{frontmatter.title}</h1>
   <slot />
 </Layout>
