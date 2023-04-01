@@ -12,7 +12,7 @@ draft: true
 ---
 
 If you've ever worked with APIs or made HTTP requests in JavaScript, you're probably familiar with
-the built-in [ fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). While fetch
+the built-in [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). While fetch
 is a great tool for making HTTP requests, it can sometimes be a bit cumbersome to work with,
 especially when you need to handle errors or configure your requests with custom headers and
 options.
