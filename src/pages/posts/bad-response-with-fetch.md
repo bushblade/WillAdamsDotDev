@@ -18,7 +18,7 @@ especially when you need to handle errors or configure your requests with custom
 options.
 
 In this blog post, we'll take a closer look at the default behavior of fetch, explain how to use the
-[ ok response ](https://developer.mozilla.org/en-US/docs/Web/API/Response/ok) to check for
+[ok response](https://developer.mozilla.org/en-US/docs/Web/API/Response/ok) to check for
 successful requests, and discuss how to handle bad responses that may include additional error
 information in the response body.
 
@@ -26,7 +26,7 @@ information in the response body.
 
 By default, fetch does not throw errors or reject promises on **4xx** and **5xx** HTTP status codes.
 Instead, it resolves the promise with the Response object, regardless of whether the request was
-successful or not. This means that you need to manually check the ok response property to determine
+successful or not. This means that you need to manually check the [ok response](https://developer.mozilla.org/en-US/docs/Web/API/Response/ok) property to determine
 whether the request was successful or not.
 
 ### Here's an example:
@@ -48,106 +48,69 @@ In this example, we're making a request to a mock API (provided by
 property to check whether the response was successful or not. If the response was not successful,
 we're throwing an error that will be caught by the catch block.
 
-## Using the ok Response Property
-
-The ok response property is a boolean that indicates whether the HTTP response was successful or
-not. It returns true for HTTP status codes in the range **200-299**, and false for any other status
-code.
-
-### Here's an example of checking the ok response property for a POST request:
-
-```javascript
-fetch('https://jsonplaceholder.typicode.com/posts', {
-  method: 'POST',
-  body: JSON.stringify({
-    title: 'foo',
-    body: 'bar',
-    userId: 1,
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-})
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok')
-    }
-    return response.json()
-  })
-  .then((data) => console.log(data))
-  .catch((error) => console.error(error))
-```
-
-In this example, we're making a POST request to the JSONPlaceholder API to create a new post. We're
-using the ok response property to check whether the response was successful or not. If the response
-was not successful, we're throwing an error that will be caught by the catch block. Handling Bad
-Responses with Additional Error Information
+### Why this isn't the best solution
 
 Many APIs will send back a JSON response along with a bad response that may contain more information
-about what went wrong. For example, an API might return a 404 error with a JSON response that
-includes an error message and a code.
+about what went wrong. For example, an API might return a 400 error with a JSON response that
+includes an error message saying what went wrong and why.
+If you run the above example and use your developer tools to inspect the
+response from the API you will see that the response also included some JSON:-
 
-To handle bad responses that include additional error information, you can parse the response body
-as JSON and extract the error information from it.
+![JSON was sent with the bad response](https://res.cloudinary.com/bushblade/image/upload/c_scale,w_800/f_webp/bushbladedotdev/bad-response-01.png)
 
-### Here's an example:
+But we didn't get that response in our code and so were not able to do
+anything meaningful with it. We see our thrown error message logged to the
+console, but in our code we have no access to the JSON that the server also
+sent.  
+To get that JSON response in our code we can add in an additional check to see
+if the response included some JSON.
+
+### Check if the bad response includes some JSON:
 
 ```javascript
-fetch('https://jsonplaceholder.typicode.com/notfound')
+fetch('https://run.mocky.io/v3/7d8c436e-d1dc-4857-b0ac-7e3e8047aef8')
   .then((response) => {
     if (!response.ok) {
-      return response.json().then((errorData) => {
-        throw new Error(errorData.message || 'Network response was not ok')
-      })
+      // check if there was JSON
+      const contentType = response.headers.get('Content-Type')
+      if (contentType && contentType.includes('application/json')) {
+        // return a rejected Promise that includes the JSON
+        return response.json().then((json) => Promise.reject(json))
+      }
+      // no JSON, just throw an error
+      throw new Error('Something went horribly wrong 💩')
     }
     return response.json()
   })
   .then((data) => console.log(data))
-  .catch((error) => console.error(error))
+  .catch((error) => {
+    console.error('Here we caught the rejection with a JSON response', error)
+  })
 ```
 
-In this example, we're making a request to an invalid URL on the JSONPlaceholder API, which will
-result in a 404 error. We're using the ok response property to check whether the response was
-successful or not. If the response was not successful, we're parsing the response body as JSON and
-extracting the message property from the error data. We're then throwing an error that will be
-caught by the catch block.
+### Now in our catch we get the bad response and the JSON payload:-
 
-By building a small library that encapsulates this error handling logic, you can make it easier to
-work with APIs that return error information in the response body. Here's an example of a small
-fetch wrapper library that handles bad responses:
+![JSON was sent with the bad response](https://res.cloudinary.com/bushblade/image/upload/c_scale,w_800/f_webp/bushbladedotdev/bad-response-02.png)
+
+This is much better. But what if we want to make other HTTP requests too?
+We can make ourselves a [small library](https://github.com/bushblade/fetch-library) that wraps Fetch with the above logic and exposes a set of
+methods for making **POST**, **PUT**, **DELETE** and **GET** requests which then
+becomes as simple as:-
 
 ```javascript
-function handleResponse(response) {
-  if (!response.ok) {
-    return response.json().then((errorData) => {
-      throw new Error(errorData.message || 'Network response was not ok')
-    })
-  }
-  return response.json()
-}
+// create an instance of the library
+const api = http('https://run.mocky.io/v3/7d8c436e-d1dc-4857-b0ac-7e3e8047aef8')
 
-function fetchWithErrors(url, options) {
-  return fetch(url, options)
-    .then(handleResponse)
-    .catch((error) => console.error(error))
-}
-
-fetchWithErrors('https://jsonplaceholder.typicode.com/notfound').then((data) =>
-  console.log(data)
-)
+api
+  .get('/posts')
+  .then(({ data }) => {
+    console.log('✅ Got a good response:-\n', data)
+  })
+  .catch(({ error, data }) => {
+    console.error('❌ Got a bad response:-\n', error, data)
+  })
 ```
 
-In this example, we've defined a handleResponse function that encapsulates the error handling logic
-we discussed earlier. We've also defined a fetchWithErrors function that calls fetch with the
-provided URL and options, and uses the handleResponse function to handle bad responses.
-
-By using this fetchWithErrors function instead of fetch, we can handle bad responses with minimal
-additional code. Conclusion
-
-fetch is a powerful tool for making HTTP requests in JavaScript, but it can be a bit cumbersome to
-work with when you need to handle errors or configure your requests with custom headers and options.
-By understanding the default behavior of fetch and using the ok response property to check for
-successful requests, you can make your code more resilient to errors.
-
-Additionally, by building a small library that encapsulates error handling logic, you can make it
-easier to work with APIs that return error information in the response body.
+This will likely be familiar to use if you have ever used a library such as [Axios](https://axios-http.com/docs/intro)
+So is a pretty neat solution if you don't need all the features of a Axios, but
+do need a little more than Fetch offers _"out of the box"_.
