@@ -54,7 +54,7 @@ The ok response property is a boolean that indicates whether the HTTP response w
 not. It returns true for HTTP status codes in the range **200-299**, and false for any other status
 code.
 
-Here's an example of checking the ok response property for a POST request:
+### Here's an example of checking the ok response property for a POST request:
 
 ```javascript
 fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -90,7 +90,7 @@ includes an error message and a code.
 To handle bad responses that include additional error information, you can parse the response body
 as JSON and extract the error information from it.
 
-Here's an example:
+### Here's an example:
 
 ```javascript
 fetch('https://jsonplaceholder.typicode.com/notfound')
