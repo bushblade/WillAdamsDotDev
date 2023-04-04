@@ -8,7 +8,8 @@
       "@components/*": ["src/components/*"],
       "@scripts/*": ["src/scripts/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@icons/*": ["src/icons/*"]
+      "@icons/*": ["src/icons/*"],
+      "@styles/*": ["src/styles/*"]
     },
     "jsxImportSource": "solid-js"
   }
