@@ -9,7 +9,8 @@
       "@scripts/*": ["src/scripts/*"],
       "@layouts/*": ["src/layouts/*"],
       "@icons/*": ["src/icons/*"],
-      "@styles/*": ["src/styles/*"]
+      "@styles/*": ["src/styles/*"],
+      "@utils/*": ["src/utils/*"]
     },
     "jsxImportSource": "solid-js"
   }

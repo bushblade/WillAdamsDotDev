@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeExternalLinks from 'rehype-external-links'
 import rehypeSlug from 'rehype-slug'
 import { h } from 'hastscript'
 import AnchorIcon from './src/icons/anchor'
@@ -13,6 +14,12 @@ export default defineConfig({
     },
     rehypePlugins: [
       rehypeSlug,
+      [
+        rehypeExternalLinks,
+        {
+          target: '_blank',
+        },
+      ],
       [
         rehypeAutolinkHeadings,
         {

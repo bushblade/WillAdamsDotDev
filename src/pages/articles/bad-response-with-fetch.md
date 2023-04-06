@@ -2,13 +2,13 @@
 layout: '@layouts/MarkdownLayout.astro'
 title: Handling bad responses with Fetch
 pubDate: 2023-03-31
-description: 'Write a small fetch library that handles bad responses'
+description: 'How to handle bad responses that include a JSON response and write a small library for the Fetch API'
 author: 'Will Adams'
 # image:
 #   url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
 #   alt: 'The Astro logo with the word One.'
 tags: ['fetch', 'javascript']
-draft: true
+draft: false
 ---
 
 If you've ever worked with APIs or made HTTP requests in JavaScript, you're probably familiar with

@@ -1,0 +1,25 @@
+---
+import type { Frontmatter } from '@layouts/MarkdownLayout.astro'
+import { formatDate } from '@utils/formatDate'
+
+export interface Props {
+  url: string
+  frontmatter: Frontmatter
+}
+
+const { frontmatter, url } = Astro.props
+---
+
+<article
+  class='bg-base-300 rounded outline outline-transparent outline-offset-0 hover:outline-offset-4 outline-2 hover:outline-primary transition-all'
+>
+  <a href={url} class='no-underline block px-10 pt-1 pb-5'>
+    <div class='text-base-content outline-0'>
+      <h2 class='text-accent no-underline'>{frontmatter.title}</h2>
+      <h3 class='no-underline text-info italic font-thin text-md'>
+        {formatDate(frontmatter.pubDate)}
+      </h3>
+      <p>{frontmatter.description}</p>
+    </div>
+  </a>
+</article>

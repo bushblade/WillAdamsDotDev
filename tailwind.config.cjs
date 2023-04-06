@@ -7,6 +7,9 @@ module.exports = {
       fontFamily: {
         fira: ['Fira Mono', ...defaultTheme.fontFamily.mono],
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--gradient-color-stops))',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],

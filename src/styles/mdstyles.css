@@ -17,4 +17,13 @@
   img {
     @apply m-auto;
   }
+  blockquote {
+    @apply bg-info-content text-info rounded mx-8;
+  }
+  aside {
+    @apply bg-info-content text-info rounded mx-8 p-6 border-l-4 border-info;
+  }
+  aside span {
+    @apply font-bold;
+  }
 }

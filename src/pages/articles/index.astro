@@ -1,0 +1,29 @@
+---
+import ArticleCard from '@components/ArticleCard.astro'
+import Layout from '@layouts/Layout.astro'
+
+import type { Frontmatter } from '@layouts/MarkdownLayout.astro'
+const posts = await Astro.glob<Frontmatter>('../articles/*.md')
+const postsNotInDraft = posts.filter((post) => {
+  return !post.frontmatter.draft
+})
+---
+
+<Layout
+  title='WillAdamsDotDev'
+  metaDescription='UK based developer and knife maker'
+  metaImage='https://res.cloudinary.com/bushblade/image/upload/f_webp/q_auto/bushbladedotdev/ogimage.jpg'
+>
+  <h1><span class='text-primary'>/</span>articles</h1>
+  <p>
+    Maybe you will find some useful stuff to read about here, but more than
+    likely its just a place for me to reference the things future me forgets!
+  </p>
+  <div class='mt-16 grid grid-cols-1 gap-10'>
+    {
+      postsNotInDraft.map((post) => (
+        <ArticleCard frontmatter={post.frontmatter} url={post.url!} />
+      ))
+    }
+  </div>
+</Layout>

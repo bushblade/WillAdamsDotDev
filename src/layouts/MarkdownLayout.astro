@@ -2,7 +2,7 @@
 import Layout from './Layout.astro'
 import '@styles/mdstyles.css'
 
-export interface PostFrontmatter {
+export interface Frontmatter {
   title: string
   pubDate: string
   description: string
@@ -12,10 +12,7 @@ export interface PostFrontmatter {
     alt: string
   }
   tags: string[]
-}
-
-interface Props {
-  frontmatter: PostFrontmatter
+  draft: boolean
 }
 
 const { frontmatter } = Astro.props
