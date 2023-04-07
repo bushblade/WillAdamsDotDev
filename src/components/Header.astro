@@ -2,9 +2,7 @@
 import Navbar from './Navbar.astro'
 ---
 
-<header
-  class='max-w-4xl grid m-auto grid-cols-1 grid-rows-2 lg:p-0 p-4 md:mb-14'
->
+<header class='max-w-4xl m-auto lg:p-0 p-4'>
   <div class='flex py-5 px-1 justify-center md:justify-end'>
     <a href='/' class='flex items-center'>
       <img
@@ -21,8 +19,8 @@ import Navbar from './Navbar.astro'
       >
     </a>
   </div>
-  <Navbar />
 </header>
+<Navbar />
 
 <style>
   span {
