@@ -92,6 +92,8 @@ fetch('https://run.mocky.io/v3/7d8c436e-d1dc-4857-b0ac-7e3e8047aef8')
 
 ![JSON was sent with the bad response](https://res.cloudinary.com/bushblade/image/upload/c_scale,w_800/f_webp/bushbladedotdev/bad-response-02.png)
 
+### Build a library to wrap Fetch
+
 This is much better. But what if we want to make other HTTP requests too?
 We can make ourselves a [small library](https://github.com/bushblade/fetch-library) that wraps Fetch with the above logic and exposes a set of
 methods for making **POST**, **PUT**, **DELETE** and **GET** requests which then
