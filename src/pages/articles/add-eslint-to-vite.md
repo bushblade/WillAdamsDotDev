@@ -131,8 +131,8 @@ warnings and errors from the linter
 
 ![Eslint showing errors](https://res.cloudinary.com/bushblade/image/upload/c_scale,w_800/f_webp/bushbladedotdev/eslint-error-react-vite.png)
 
-**Much better!** By adding eslint to our Vite React project and extending the necessary plugins,
-you can ensure that our code adheres to best practices and coding standards.
+**Much better!** Adding eslint to our Vite React project and extending the necessary plugins,
+ensures that our code adheres to best practices and coding standards.
 Eslint is a powerful tool that can help you catch issues early in development,
 saving you time and effort in the long run.
 If you're starting out on your React journey and using Vite, I highly recommend
