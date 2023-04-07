@@ -5,9 +5,9 @@ const currentPath = pathname.slice(1)
 const links = ['about', 'projects', 'uses', 'articles']
 ---
 
-<nav>
+<nav class='flex justify-center md:justify-start'>
   <ul>
-    <li class='inline-flex mx-1'>
+    <li class='mx-1 hidden md:inline-flex'>
       <a
         aria-label='Link to the home page'
         class={`capitalize btn btn-ghost ${
@@ -19,10 +19,10 @@ const links = ['about', 'projects', 'uses', 'articles']
       >
     </li>{
       links.map((link) => (
-        <li class='inline-flex mx-1'>
+        <li class='inline-flex md:mx-1'>
           <a
             aria-label={`Link to the ${link} page`}
-            class={`capitalize btn btn-ghost ${
+            class={`capitalize btn btn-ghost btn-sm sm:btn-md ${
               currentPath.includes(link)
                 ? 'btn-outline hover:bg-transparent hover:text-current'
                 : ''
