@@ -7,6 +7,10 @@ const posts = await Astro.glob<Frontmatter>('../articles/*.md')
 const postsNotInDraft = posts.filter((post) => {
   return !post.frontmatter.draft
 })
+
+const sortedByDate = postsNotInDraft.sort(
+  (a, b) => +new Date(b.frontmatter.pubDate) - +new Date(a.frontmatter.pubDate)
+)
 ---
 
 <Layout
@@ -21,7 +25,7 @@ const postsNotInDraft = posts.filter((post) => {
   </p>
   <div class='mt-16 grid grid-cols-1 gap-10'>
     {
-      postsNotInDraft.map((post) => (
+      sortedByDate.map((post) => (
         <ArticleCard frontmatter={post.frontmatter} url={post.url!} />
       ))
     }
