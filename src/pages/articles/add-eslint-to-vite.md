@@ -17,7 +17,7 @@ development experience than Create React App.
 
 ## Coming from Create React App
 
-If you're coming Create React App, you may be used to having many
+If you're coming from Create React App, you may be used to having many
 [eslint](https://eslint.org/)
 plugins included out-of-the-box, like
 [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks),
