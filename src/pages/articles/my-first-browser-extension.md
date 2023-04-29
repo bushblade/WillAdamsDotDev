@@ -17,20 +17,34 @@ As someone who answers students' questions in [Brad Traversy's](https://www.trav
 noticed that many of them were reporting having difficulty keeping track of which lesson
 they're on in the side menu while using the course platform, as each time they
 would click on a lesson the side menu would reset.  
+Additionally the video player is currently limited to a maximum width of **1356px**,
+meaning for those students on larger monitors, the video looks oddly small.  
 Unfortunately, since the platform is provided by [Kajabi](https://kajabi.com/), we don't have access to their code to
 modify the behavior.
+
+### Before extension:
+
+![Before Extension](https://res.cloudinary.com/bushblade/image/upload/c_scale,w_800/f_webp/bushbladedotdev/extension-before.webp)
 
 ## The solution 💡
 
 To address this issue, I've developed a browser extension for Chrome and FireFox. This
 extension is a simple yet effective add on that automatically scrolls the active
 lesson to the center of the sidebar and highlights it in Traversy Media blue,
-each time a lesson is selected.
+each time a lesson is selected.  
+It also targets the video container (Ironically with the class name
+`kjb-video-responsive`🤷) and maximises it to the available space in the
+viewport while limiting the max size so all the video is always visible and
+preserving the aspect ratio.
 
 As a newcomer to browser extension development, creating this tool was a great
 learning experience for me. It was a simple introduction to the process of
 developing browser extensions, and I found it to be an enjoyable and rewarding
 process.
+
+### After extension:
+
+![Before Extension](https://res.cloudinary.com/bushblade/image/upload/c_scale,w_800/f_webp/bushbladedotdev/extension-after.webp)
 
 ### Resources I used 📚
 
@@ -39,7 +53,7 @@ process.
 
 ## Super simple 💪
 
-The code itself is only a few lines:
+The code itself is only 28 lines:
 
 ```javascript
 function highlightAndScrollIntoViewActive() {
@@ -52,7 +66,24 @@ function highlightAndScrollIntoViewActive() {
   activeLink.scrollIntoView({ behavior: 'smooth', block: 'center' })
 }
 
-highlightAndScrollIntoViewActive()
+function maximiseVideo() {
+  const searchForm = document.querySelectorAll('form[role=search]')[1]
+  const videoWrapper = document.querySelector('.kjb-video-responsive')
+  videoWrapper.style.maxWidth = '100%'
+  videoWrapper.style.paddingBottom = '0'
+  videoWrapper.style.aspectRatio = '5/4'
+  videoWrapper.style.height = 'auto'
+  videoWrapper.style.maxHeight = `calc(100vh - ${
+    searchForm.getBoundingClientRect().height
+  }px)`
+  videoWrapper.style.width = '100%'
+  searchForm.scrollIntoView(true)
+}
+
+maximiseVideo()
+
+// NOTE: Ensure scroll animation runs after video resized
+window.requestAnimationFrame(highlightAndScrollIntoViewActive)
 ```
 
 All it does is use the **_active_** class that Kajabi add to find the correct
@@ -61,6 +92,13 @@ it.
 Any time a student clicks a lesson it's a link that takes them to a page for
 that lesson, so the code runs again after the DOM is loaded (this is the default
 for any extension).
+
+For maximising the video size I noted that Kajabi were using the old trick of
+`height: 0;` and `padding-bottom: 56%;` trick to preserve the aspect ratio, but
+also limiting the `max-width` to 1356px. Using newer css features like [CSS
+Aspect Ratio](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio)
+helped to fix this along with calculating the max height to account for the
+search bar they position above the video.
 
 ## Get it if you're a student of Traversy Media 🚀
 
