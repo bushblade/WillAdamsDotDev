@@ -94,7 +94,7 @@ that lesson, so the code runs again after the DOM is loaded (this is the default
 for any extension).
 
 For maximising the video size I noted that Kajabi were using the old trick of
-`height: 0;` and `padding-bottom: 56%;` trick to preserve the aspect ratio, but
+`height: 0;` and `padding-bottom: 56%;` to preserve the aspect ratio, but
 also limiting the `max-width` to 1356px. Using newer css features like [CSS
 Aspect Ratio](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio)
 helped to fix this along with calculating the max height to account for the
