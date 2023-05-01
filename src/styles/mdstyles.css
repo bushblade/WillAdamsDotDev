@@ -26,4 +26,7 @@
   aside span {
     @apply font-bold;
   }
+  code {
+    @apply bg-info-content text-info !rounded;
+  }
 }
