@@ -27,6 +27,6 @@
     @apply font-bold;
   }
   code {
-    @apply bg-zinc-600 text-neutral-200 !rounded-sm;
+    @apply bg-slate-800 text-slate-300 !rounded-sm !py-1;
   }
 }
