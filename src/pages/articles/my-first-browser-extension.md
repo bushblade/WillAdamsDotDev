@@ -33,7 +33,7 @@ extension is a simple yet effective add on that automatically scrolls the active
 lesson to the center of the sidebar and highlights it in Traversy Media blue,
 each time a lesson is selected.  
 It also targets the video container (Ironically with the class name
-`kjb-video-responsive`🤷) and maximises it to the available space in the
+`kjb-video-responsive` 🤷) and maximises it to the available space in the
 viewport while limiting the max size so all the video is always visible and
 preserving the aspect ratio.
 
