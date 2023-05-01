@@ -29,6 +29,7 @@ export default defineConfig({
               `span.anchor-icon`,
               {
                 ariaHidden: 'true',
+                dataTip: 'Direct link',
               },
               AnchorIcon
             ),

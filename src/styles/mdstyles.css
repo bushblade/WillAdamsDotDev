@@ -30,3 +30,7 @@
     @apply bg-slate-800 text-slate-300 !rounded-sm !py-1;
   }
 }
+
+.anchor-icon {
+  @apply tooltip tooltip-bottom tooltip-info;
+}
