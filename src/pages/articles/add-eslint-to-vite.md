@@ -15,6 +15,13 @@ draft: false
 near-instantaneous startup times and a plugin system, with a much nicer
 development experience than Create React App.
 
+<aside> 
+  <span>NOTE:</span> As of <a
+  href="https://github.com/vitejs/vite/pull/12801" target="_blank">this PR</a> on 20th April
+  2023 Vite comes with
+  Eslint and rules for React included 'out-of-the-box'.
+</aside>
+
 ## Coming from Create React App
 
 If you're coming from Create React App, you may be used to having many
