@@ -1,6 +1,7 @@
 ---
 import Footer from '@components/Footer.astro'
 import Header from '@components/Header.astro'
+import '@twicpics/components/style.css'
 
 export interface Props {
   title: string
@@ -43,6 +44,18 @@ const { title, metaDescription, metaImage } = Astro.props
       rel='stylesheet'
     />
     <meta name='generator' content={Astro.generator} />
+    <script>
+      import {
+        installTwicpics,
+        TwicImg,
+      } from '@twicpics/components/webcomponents'
+
+      installTwicpics({
+        domain: 'https://willadams.twic.pics',
+      })
+
+      customElements.define('twic-img', TwicImg)
+    </script>
     <title>{title}</title>
   </head>
   <body class='min-h-screen font-fira bg-base-100'>

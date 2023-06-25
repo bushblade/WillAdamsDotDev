@@ -37,7 +37,7 @@ which CRA offered.
 
 ### Example:
 
-![No errors](https://res.cloudinary.com/bushblade/image/upload/c_scale,w_800/f_webp/bushbladedotdev/eslint-no-error.png)
+![No errors](https://willadams.twic.pics/eslint-no-error.png?twic=v1/resize=800)
 Here we are clearly breaking the [rules of hooks](https://legacy.reactjs.org/docs/hooks-rules.html), we are trying to use [useEffect](https://react.dev/reference/react/useEffect)
 inside a functtion and returning a Promise that resolves with `'foo'`  
 **You cannot and should not do this.**  

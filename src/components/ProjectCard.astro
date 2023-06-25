@@ -26,12 +26,12 @@ const { title, url, repo, tech, image } = Astro.props
     {
       image ? (
         <div class='flex items-center justify-center'>
-          <a href={url} target='_blank'>
-            <img
+          <a href={url} target='_blank' class='block w-full'>
+            <twic-img
+              ratio='16/9'
               src={image}
               alt={title}
-              class='rounded outline outline-secondary-content outline-offset-0 hover:outline-offset-4 outline-2
-              hover:outline-secondary transition-all'
+              class='rounded outline outline-secondary-content outline-offset-0 hover:outline-offset-4 outline-2 hover:outline-secondary transition-all'
             />
           </a>
         </div>
