@@ -20,6 +20,9 @@ development experience than Create React App.
   href="https://github.com/vitejs/vite/pull/12801" target="_blank">this PR</a> on 20th April
   2023 Vite comes with
   Eslint and rules for React included 'out-of-the-box'.
+  It doesn't by default output to the terminal so you may still want to add the
+    <a href="#add-eslint-to-vite"
+        target="_blank">vite-plugin-eslint</a>
 </aside>
 
 ## Coming from Create React App
@@ -103,7 +106,7 @@ something you should not.
 
 Now that eslint is configured we can add a plugin for Vite so you can get the
 linting to run at build time to check our code before you deploy.
-The plugin also runs eslint with output into our browser console, so you really
+The plugin also runs eslint with output into our terminal, so you really
 have no excuse for ignoring the warnings!
 
 install the **vite-plugin-eslint** plugin:
