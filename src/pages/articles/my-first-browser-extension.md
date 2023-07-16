@@ -106,7 +106,7 @@ search bar they position above the video.
 
 In addition to the original features, I have also updated the extension to persist the video speed for users. This means that the video speed will be saved to local storage and will be restored the next time the user watches a lesson.
 
-This was a tricky problem to solve because the video speed settings are dynamically inserted into the DOM after the video is loaded. To solve this, I used the MutationObserver API to watch for changes to the DOM and then take action when the speed setting buttons were ready.
+This was a tricky problem to solve because the video speed settings are dynamically inserted into the DOM after the video is loaded. To solve this, I used the [MutationObserver API](<(https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)>) to watch for changes to the DOM and then take action when the speed setting buttons were ready.
 
 ### Here is the code to persist the video speed:
 
