@@ -11,16 +11,9 @@ tags: ['fetch', 'javascript']
 draft: false
 ---
 
-If you've ever worked with APIs or made HTTP requests in JavaScript, you're probably familiar with
-the built-in [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). While fetch
-is a great tool for making HTTP requests, it can sometimes be a bit cumbersome to work with,
-especially when you need to handle errors or configure your requests with custom headers and
-options.
+If you've ever worked with APIs or made HTTP requests in JavaScript, you're probably familiar with the built-in [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). While fetch is a great tool for making HTTP requests, it can sometimes be a bit cumbersome to work with, especially when you need to handle errors or configure your requests with custom headers and options.
 
-In this blog post, we'll take a closer look at the default behavior of fetch, explain how to use the
-[ok response](https://developer.mozilla.org/en-US/docs/Web/API/Response/ok) to check for
-successful requests, and discuss how to handle bad responses that may include additional error
-information in the response body.
+In this post, we'll take a closer look at the default behavior of fetch, explain how to use the [ok response](https://developer.mozilla.org/en-US/docs/Web/API/Response/ok) to check for successful requests, and discuss how to handle bad responses that may include additional error information in the response body. We'll also introduce a small library that wraps fetch and simplifies error handling, enabling easier access to any additional error information that may be included in the response.
 
 ## The Default Behavior of fetch
 
@@ -50,9 +43,8 @@ we're throwing an error that will be caught by the catch block.
 
 ### Why this isn't the best solution
 
-Many APIs will send back a JSON response along with a bad response that may contain more information
-about what went wrong. For example, an API might return a 400 error with a JSON response that
-includes an error message saying what went wrong and why.
+While checking the `ok` property is an effective way to identify unsuccessful requests, this method has a significant limitation: it doesn't allow you to access potentially useful error information included in the response body. Many APIs will send back a JSON response along with a bad response that may contain more information about what went wrong. For example, an API might return a 400 error with a JSON response that includes an error message saying what went wrong and why.
+
 If you run the above example and use your developer tools to inspect the
 response from the API you will see that the response also included some JSON:-
 
