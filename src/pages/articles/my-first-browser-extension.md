@@ -183,7 +183,7 @@ const mutationObserver = new MutationObserver(mutationCallback)
 mutationObserver.observe(videoWrapper, observerOptions)
 ```
 
-This code uses the [MutationObserver API](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) to watch for changes to the DOM. When the speed setting buttons are inserted into the DOM, the mutationCallback function is called. This function then adds event listeners to the speed setting buttons to set the users chosen speen in local storage and restores the previously saved video speed.
+This code uses the [MutationObserver API](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) to watch for changes to the DOM. When the speed setting buttons are inserted into the DOM, the mutationCallback function is called. This function then adds event listeners to the speed setting buttons to set the users chosen speed in local storage and restores the previously saved video speed.
 
 ## Get it if you're a student of Traversy Media 🚀
 
