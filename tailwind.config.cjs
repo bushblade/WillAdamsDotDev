@@ -16,5 +16,4 @@ module.exports = {
   daisyui: {
     themes: ['forest'],
   },
-  purge: ['./public/**/*.html', './src/**/*.astro'],
 }
