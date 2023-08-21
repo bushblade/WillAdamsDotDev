@@ -45,7 +45,9 @@ const { title, metaDescription, metaImage } = Astro.props
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class='min-h-screen font-fira bg-base-100'>
+  <body
+    class='min-h-screen font-fira bg-gradient-to-tr from-neutral-focus via-base-100 to-base-200 bg-fixed'
+  >
     <Header />
     <main
       class='max-w-4xl grid m-auto prose prose-a:link-accent prose-img:rounded lg:p-0 p-4 min-h-[30vh]'
