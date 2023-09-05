@@ -1,15 +1,14 @@
 ---
+import { getCollection } from 'astro:content'
 import ArticleCard from '@components/ArticleCard.astro'
 import Layout from '@layouts/Layout.astro'
 
-import type { Frontmatter } from '@layouts/MarkdownLayout.astro'
-const posts = await Astro.glob<Frontmatter>('../articles/*.md')
-const postsNotInDraft = posts.filter((post) => {
-  return !post.frontmatter.draft
+const articles = await getCollection('articles', ({ data }) => {
+  return import.meta.env.PROD ? data.draft !== true : true
 })
 
-const sortedByDate = postsNotInDraft.sort(
-  (a, b) => +new Date(b.frontmatter.pubDate) - +new Date(a.frontmatter.pubDate)
+const articlesSortedByDate = articles.sort(
+  (a, b) => +new Date(b.data.pubDate) - +new Date(a.data.pubDate)
 )
 ---
 
@@ -25,8 +24,11 @@ const sortedByDate = postsNotInDraft.sort(
   </p>
   <div class='mt-16 grid grid-cols-1 gap-10'>
     {
-      sortedByDate.map((post) => (
-        <ArticleCard frontmatter={post.frontmatter} url={post.url!} />
+      articlesSortedByDate.map((article) => (
+        <ArticleCard
+          frontmatter={article.data}
+          url={'/articles/' + article.slug}
+        />
       ))
     }
   </div>

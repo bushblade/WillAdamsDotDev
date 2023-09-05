@@ -1,5 +1,4 @@
 ---
-layout: '@layouts/MarkdownLayout.astro'
 title: Handling bad responses with Fetch
 pubDate: 2023-03-31
 description: 'How to handle bad responses that include a JSON response and write a small library for the Fetch API'

@@ -1,5 +1,4 @@
 ---
-layout: '@layouts/MarkdownLayout.astro'
 title: Add Eslint to a React Vite project
 pubDate: 2023-04-04
 description: Moving from Create React App to vite? You'll probably want to add some linting to help stop you screwing up.

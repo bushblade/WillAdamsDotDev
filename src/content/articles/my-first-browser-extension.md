@@ -1,5 +1,4 @@
 ---
-layout: '@layouts/MarkdownLayout.astro'
 title: My First Browser Extension
 pubDate: 2023-04-08
 description: I made my first Chrome and FireFox extension to solve a problem for students of Brad Traversy in his courses.

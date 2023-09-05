@@ -1,5 +1,4 @@
 ---
-layout: '@layouts/MarkdownLayout.astro'
 title: 'Closures in JavaScript'
 pubDate: 2023-08-16
 description: 'Closures in JavaScript: A concise exploration of closures, their benefits, and a simple example to illustrate the concept. Boost your JS skills with this foundational knowledge!'

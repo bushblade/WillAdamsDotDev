@@ -1,10 +1,10 @@
 ---
-import type { Frontmatter } from '@layouts/MarkdownLayout.astro'
 import { formatDate } from '@utils/formatDate'
+import type { ArticleSchema } from '../schemas/articleSchema'
 
 export interface Props {
   url: string
-  frontmatter: Frontmatter
+  frontmatter: ArticleSchema
 }
 
 const { frontmatter, url } = Astro.props
