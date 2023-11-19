@@ -42,7 +42,3 @@ This function will consistently give you a random number between 1 and 100 with 
 While `Math.ceil(Math.random())` might seem like a straightforward solution for random number generation, it introduces a slight bias and the possibility of zero, which might not be desirable. For a better distribution and reliability, `Math.floor(Math.random() * 100) + 1` is the way to go.
 
 Understanding these nuances is key to effective programming in JavaScript, especially when dealing with randomness and its implications.
-
----
-
-You can adjust the emojis or content as needed for your specific audience and website style.
