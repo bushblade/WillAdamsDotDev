@@ -3,10 +3,11 @@ title: My First Browser Extension
 pubDate: 2023-04-08
 description: I made my first Chrome and FireFox extension to solve a problem for students of Brad Traversy in his courses.
 author: 'Will Adams'
-# image:
-#   url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
-#   alt: 'The Astro logo with the word One.'
-tags: ['Chrome', 'FireFox']
+image:
+  url: 'https://res.cloudinary.com/bushblade/image/upload/c_scale,w_800/bushbladedotdev/my-first-browser-extension.avif'
+  alt: 'My First Browser Extension'
+  thumbnail: 'https://res.cloudinary.com/bushblade/image/upload/c_thumb,w_400,g_face/bushbladedotdev/my-first-browser-extension.avif'
+tags: ['Chrome', 'FireFox', 'JavaScript']
 draft: false
 ---
 

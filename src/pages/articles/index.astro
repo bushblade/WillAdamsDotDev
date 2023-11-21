@@ -4,7 +4,8 @@ import ArticleCard from '@components/ArticleCard.astro'
 import Layout from '@layouts/Layout.astro'
 
 const articles = await getCollection('articles', ({ data }) => {
-  return import.meta.env.PROD ? data.draft !== true : true
+  // return import.meta.env.PROD ? data.draft !== true : true
+  return data.draft !== true
 })
 
 const articlesSortedByDate = articles.sort(

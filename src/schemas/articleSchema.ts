@@ -5,12 +5,11 @@ export const articleSchema = z.object({
   pubDate: z.date(),
   description: z.string(),
   author: z.string(),
-  image: z
-    .object({
-      url: z.string(),
-      alt: z.string(),
-    })
-    .optional(),
+  image: z.object({
+    url: z.string(),
+    alt: z.string(),
+    thumbnail: z.string(),
+  }),
   tags: z.array(z.string()),
   draft: z.boolean(),
 })

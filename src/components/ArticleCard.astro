@@ -14,12 +14,22 @@ const { frontmatter, url } = Astro.props
   class='bg-base-200 rounded outline outline-transparent outline-offset-0 hover:outline-offset-4 outline-2 hover:outline-secondary transition-all'
 >
   <a href={url} class='no-underline block px-10 pt-1 pb-5'>
-    <div class='text-base-content outline-0'>
-      <h2 class='no-underline'>{frontmatter.title}</h2>
-      <h3 class='no-underline text-accent italic font-thin text-md'>
-        {formatDate(frontmatter.pubDate)}
-      </h3>
-      <p>{frontmatter.description}</p>
+    <div class='grid md:grid-cols-2 gap-4'>
+      <div class='text-base-content outline-0'>
+        <h2 class='no-underline'>{frontmatter.title}</h2>
+        <h3 class='no-underline text-accent italic font-thin text-md'>
+          {formatDate(frontmatter.pubDate)}
+        </h3>
+        <p>{frontmatter.description}</p>
+      </div>
+
+      <div class='flex items-center justify-center'>
+        <img
+          src={frontmatter.image.thumbnail}
+          alt={frontmatter.image.alt}
+          class='rounded'
+        />
+      </div>
     </div>
   </a>
 </article>

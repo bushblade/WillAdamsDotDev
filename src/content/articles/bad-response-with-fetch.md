@@ -3,9 +3,10 @@ title: Handling bad responses with Fetch
 pubDate: 2023-03-31
 description: 'How to handle bad responses that include a JSON response and write a small library for the Fetch API'
 author: 'Will Adams'
-# image:
-#   url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
-#   alt: 'The Astro logo with the word One.'
+image:
+  url: 'https://res.cloudinary.com/bushblade/image/upload/c_scale,w_800/v1700571798/bushbladedotdev/bad-response-with-fetch.avif'
+  alt: 'The Astro logo with the word One.'
+  thumbnail: https://res.cloudinary.com/bushblade/image/upload/c_thumb,g_face,w_400/v1700571798/bushbladedotdev/bad-response-with-fetch.avif
 tags: ['fetch', 'javascript']
 draft: false
 ---

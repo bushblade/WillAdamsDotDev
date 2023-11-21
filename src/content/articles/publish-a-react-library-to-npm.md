@@ -3,9 +3,10 @@ title: '📚 Creating, Testing, and Publishing a React Library using PNPM'
 pubDate: 2023-07-20
 description: 'Unleash your React components into the world! Learn how to create, test, and publish your own React library using pnpm, enriching the npm ecosystem one component at a time.'
 author: 'Will Adams'
-# image:
-#   url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
-#   alt: 'The Astro logo with the word One.'
+image:
+  url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
+  alt: 'The Astro logo with the word One.'
+  thumbnail: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
 tags: ['pnpm', 'react']
 draft: true
 ---

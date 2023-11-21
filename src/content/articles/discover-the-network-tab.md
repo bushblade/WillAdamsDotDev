@@ -3,9 +3,10 @@ title: 'Developer Tools: Network Tab and XHR Logging'
 pubDate: 2023-07-20
 description: "Uncover the power of your browser's Developer Tools, focusing on the Network tab and XHR logging, to debug and optimize your web applications more effectively"
 author: 'Will Adams'
-# image:
-#   url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
-#   alt: 'The Astro logo with the word One.'
+image:
+  url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
+  alt: 'The Astro logo with the word One.'
+  thumbnail: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
 tags: ['browser', 'tools']
 draft: true
 ---

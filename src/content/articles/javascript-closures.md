@@ -3,9 +3,10 @@ title: 'Closures in JavaScript'
 pubDate: 2023-08-16
 description: 'Closures in JavaScript: A concise exploration of closures, their benefits, and a simple example to illustrate the concept. Boost your JS skills with this foundational knowledge!'
 author: 'Will Adams'
-# image:
-#   url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg'
-#   alt: 'The Astro logo with the word One.'
+image:
+  url: 'https://res.cloudinary.com/bushblade/image/upload/c_scale,w_800/v1700571798/bushbladedotdev/javascript-closures.avif'
+  alt: 'Closures in JavaScript'
+  thumbnail: 'https://res.cloudinary.com/bushblade/image/upload/c_thumb,w_400,g_face/bushbladedotdev/javascript-closures.avif'
 tags: ['javascript', 'fundamentals']
 draft: false
 ---
