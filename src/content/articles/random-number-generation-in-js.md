@@ -10,11 +10,11 @@ tags: ['JavaScript']
 draft: false
 ---
 
-## The Issue with `Math.ceil(Math.random())` 🤔
+## The Issue with Math.ceil(Math.random()) 🤔
 
 In JavaScript, generating random numbers is a common task, but it's crucial to understand the distribution of these numbers to ensure fairness and accuracy in applications. A frequently encountered solution is using `Math.ceil(Math.random())`, but this approach has its pitfalls.
 
-### Why `Math.ceil(Math.random())` is Problematic 🚫
+### Why Math.ceil(Math.random()) is Problematic 🚫
 
 1. **Bias Towards 1**: `Math.random()` generates a number ranging from 0 (inclusive) to 1 (exclusive), typically very close to 0. When `Math.ceil()` is applied to this, the number is rounded up to the nearest integer. This process makes the occurrence of 1 slightly more likely than other numbers.
 
