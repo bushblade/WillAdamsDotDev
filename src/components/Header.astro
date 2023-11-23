@@ -1,5 +1,12 @@
 ---
+import { getCloudinaryUrl } from '@utils/cloudinary'
 import Navbar from './Navbar.astro'
+
+const profilePic = getCloudinaryUrl('bushbladedotdev/profile', {
+  width: 52,
+  height: 52,
+  format: 'avif',
+})
 ---
 
 <header class='max-w-4xl m-auto lg:p-0 p-4'>
@@ -9,7 +16,7 @@ import Navbar from './Navbar.astro'
         width='52px'
         height='52px'
         class='rounded-full border-2 border-secondary mx-2'
-        src='https://res.cloudinary.com/bushblade/image/upload/c_scale,h_50,w_50/f_webp/bushbladedotdev/profile.jpg'
+        src={profilePic}
         alt='Will Adams'
       />
       <span

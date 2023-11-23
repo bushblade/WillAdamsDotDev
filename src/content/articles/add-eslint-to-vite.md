@@ -1,12 +1,11 @@
 ---
 title: Add Eslint to a React Vite project
 pubDate: 2023-04-04
-description: Moving from Create React App to vite? You'll probably want to add some linting to help stop you screwing up.
+description: Moving from Create React App to vite? You'll probably want to add some linting to help prevent you screwing up.
 author: 'Will Adams'
 image:
-  url: 'https://res.cloudinary.com/bushblade/image/upload/c_scale,w_800/v1700571800/bushbladedotdev/add-eslint-to-vite.avif'
+  url: 'bushbladedotdev/add-eslint-to-vite'
   alt: 'Add Eslint to a React Vite project'
-  thumbnail: https://res.cloudinary.com/bushblade/image/upload/c_scale,w_400/v1700571800/bushbladedotdev/add-eslint-to-vite.avif
 tags: ['React', 'Vite', 'eslint']
 draft: false
 ---

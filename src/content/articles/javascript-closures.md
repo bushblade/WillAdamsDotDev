@@ -4,9 +4,8 @@ pubDate: 2023-08-16
 description: 'Closures in JavaScript: A concise exploration of closures, their benefits, and a simple example to illustrate the concept. Boost your JS skills with this foundational knowledge!'
 author: 'Will Adams'
 image:
-  url: 'https://res.cloudinary.com/bushblade/image/upload/c_scale,w_800/v1700571798/bushbladedotdev/javascript-closures.avif'
+  url: 'bushbladedotdev/javascript-closures'
   alt: 'Closures in JavaScript'
-  thumbnail: 'https://res.cloudinary.com/bushblade/image/upload/c_thumb,w_400,g_face/bushbladedotdev/javascript-closures.avif'
 tags: ['javascript', 'fundamentals']
 draft: false
 ---

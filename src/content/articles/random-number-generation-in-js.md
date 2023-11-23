@@ -4,9 +4,8 @@ pubDate: 2023-11-19
 description: "Discover why Math.ceil(Math.random()) isn't ideal for random number generation in JavaScript and learn a better method for achieving a fair and evenly distributed range."
 author: 'Will Adams'
 image:
-  url: 'https://res.cloudinary.com/bushblade/image/upload/c_scale,w_800/bushbladedotdev/random-number-generation-in-js.avif'
+  url: 'bushbladedotdev/random-number-generation-in-js'
   alt: 'Distribution of Random Numbers in JavaScript'
-  thumbnail: 'https://res.cloudinary.com/bushblade/image/upload/c_thumb,w_400,g_face/bushbladedotdev/random-number-generation-in-js.avif'
 tags: ['JavaScript']
 draft: false
 ---

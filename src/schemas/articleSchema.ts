@@ -8,7 +8,6 @@ export const articleSchema = z.object({
   image: z.object({
     url: z.string(),
     alt: z.string(),
-    thumbnail: z.string(),
   }),
   tags: z.array(z.string()),
   draft: z.boolean(),
