@@ -1,4 +1,4 @@
-import { v2 as cloudinary, type ConfigOptions } from 'cloudinary'
+import { v2 as cloudinary, type ImageTransformationOptions } from 'cloudinary'
 
 cloudinary.config({
   cloud_name: 'bushblade',
@@ -10,7 +10,7 @@ cloudinary.config({
 // Wrapper function for Cloudinary URL
 export function getCloudinaryUrl(
   publicId: string,
-  options?: ConfigOptions
+  options?: ImageTransformationOptions
 ): string {
   return cloudinary.url(publicId, options)
 }
