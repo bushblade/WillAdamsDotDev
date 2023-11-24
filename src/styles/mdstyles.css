@@ -32,5 +32,5 @@
 }
 
 .anchor-icon {
-  @apply tooltip tooltip-bottom tooltip-info;
+  @apply md:tooltip md:tooltip-bottom md:tooltip-info;
 }
