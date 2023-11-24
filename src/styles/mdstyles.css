@@ -5,14 +5,14 @@
 /* styling for the anchor link in markdown */
 @layer components {
   *:is(h1, h2, h3, h4, h5, h6) {
-    @apply flex items-center gap-2;
-    @apply scroll-mt-16;
+    @apply md:flex md:items-center md:gap-2;
+    @apply md:scroll-mt-16;
   }
   *:is(h1, h2, h3, h4, h5, h6) > a > span {
     @apply invisible;
   }
   *:is(h1, h2, h3, h4, h5, h6):hover > a > span {
-    @apply visible;
+    @apply md:visible;
   }
   img {
     @apply m-auto;
