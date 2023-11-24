@@ -5,12 +5,13 @@ import Twitter from '../icons/twitter.astro'
 import Instagram from '../icons/instagram.astro'
 import Telegram from '../icons/telegram.astro'
 import Email from '../icons/email.astro'
+import Kofi from '../icons/kofiLogo.astro'
 ---
 
 <footer class='max-w-4xl m-auto py-20 flex flex-col items-center'>
-  <ul class='m-auto flex flex-wrap justify-around'>
+  <ul class='flex flex-wrap justify-around'>
     <li
-      class='inline-flex mx-2 tooltip tooltip-top tooltip-info'
+      class='inline-flex mx-1 sm:mx-2 tooltip tooltip-top tooltip-info'
       data-tip='Github'
     >
       <a
@@ -21,7 +22,7 @@ import Email from '../icons/email.astro'
       >
     </li>
     <li
-      class='inline-flex mx-2 tooltip tooltip-top tooltip-info'
+      class='inline-flex mx-1 sm:mx-2 tooltip tooltip-top tooltip-info'
       data-tip='Gitlab'
     >
       <a
@@ -32,7 +33,7 @@ import Email from '../icons/email.astro'
       >
     </li>
     <li
-      class='inline-flex mx-2 tooltip tooltip-top tooltip-info'
+      class='inline-flex mx-1 sm:mx-2 tooltip tooltip-top tooltip-info'
       data-tip='Twitter'
     >
       <a
@@ -43,7 +44,7 @@ import Email from '../icons/email.astro'
       >
     </li>
     <li
-      class='inline-flex mx-2 tooltip tooltip-top tooltip-info'
+      class='inline-flex mx-1 sm:mx-2 tooltip tooltip-top tooltip-info'
       data-tip='Instagram'
     >
       <a
@@ -54,7 +55,7 @@ import Email from '../icons/email.astro'
       >
     </li>
     <li
-      class='inline-flex mx-2 tooltip tooltip-top tooltip-info'
+      class='inline-flex mx-1 sm:mx-2 tooltip tooltip-top tooltip-info'
       data-tip='Telegram'
     >
       <a
@@ -65,7 +66,7 @@ import Email from '../icons/email.astro'
       >
     </li>
     <li
-      class='inline-flex mx-2 tooltip tooltip-top tooltip-info'
+      class='inline-flex mx-1 sm:mx-2 tooltip tooltip-top tooltip-info'
       data-tip='Email me'
     >
       <a
@@ -77,15 +78,29 @@ import Email from '../icons/email.astro'
         <Email />
       </a>
     </li>
+    <li
+      class='inline-flex mx-1 sm:mx-2 tooltip tooltip-top tooltip-info'
+      data-tip='Buy me a Ko-fi'
+    >
+      <a
+        target='_blank'
+        aria-label='Buy me a Ko-fi'
+        class='link-hover hover:animate-pulse'
+        href='https://ko-fi.com/willadams'
+      >
+        <Kofi />
+      </a>
+    </li>
   </ul>
   <p class='mt-16 text-xs'>
     All content &copy; {new Date().getFullYear()} Will Adams
   </p>
   <p class='text-xs'>
-    Icons by <a
+    Icons (mostly!) by <a
       href='https://openmoji.org/'
       target='_blank'
       class='link link-info'>Open Emoji</a
-    > (mostly!)
+    >
+    <small>two are made by me, but which...?</small>
   </p>
 </footer>
