@@ -1,7 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro'
 import ProjectCard from '@components/ProjectCard.astro'
-import { getCloudinaryUrl } from '@utils/cloudinary'
 
 const tech = {
   typeScript: {
@@ -50,10 +49,7 @@ const tech = {
     title='Bushblade Knives Website'
     repo='https://github.com/bushblade/bushblade-knives-website'
     tech={[tech.gatsby, tech.styledComponents, tech.netlify, tech.reactSpring]}
-    image={getCloudinaryUrl('bushbladedotdev/bushblade-knives', {
-      width: 600,
-      format: 'avif',
-    })}
+    image='bushbladedotdev/bushblade-knives'
   >
     Created out of a need for a site to showcase my work as a Knife Maker and
     the project that set me on my web development journey. The site has
@@ -67,10 +63,7 @@ const tech = {
     title='React Touch & Drag Slider'
     repo='https://github.com/bushblade/react-touch-drag-slider'
     tech={[tech.react, tech.vite, tech.typeScript]}
-    image={getCloudinaryUrl('bushbladedotdev/slider', {
-      width: 600,
-      format: 'avif',
-    })}
+    image='bushbladedotdev/slider'
   >
     A touch friendly slider component for React with zero dependencies,
     originally made for Bushblade Knives but I decided to publish to the npm
@@ -82,10 +75,7 @@ const tech = {
     title='West Yorkshire Bushcraft Website'
     repo='https://github.com/bushblade/WYB'
     tech={[tech.gatsby, tech.reactSpring, tech.netlify]}
-    image={getCloudinaryUrl('bushbladedotdev/wyb-website', {
-      width: 600,
-      format: 'avif',
-    })}
+    image='bushbladedotdev/wyb-website'
   >
     Built for my Bushcraft group to show the sort of things we get up to and
     help people find us. Built using Gatsby and Styled Components, animations
@@ -93,14 +83,11 @@ const tech = {
   </ProjectCard>
 
   <ProjectCard
-    url='/'
+    url='https://willadams.dev/'
     title='This site!'
     repo='https://github.com/bushblade/WillAdamsDotDev'
     tech={[tech.astro, tech.typeScript, tech.tailwind, tech.netlify]}
-    image={getCloudinaryUrl('bushbladedotdev/editor', {
-      width: 600,
-      format: 'avif',
-    })}
+    image='bushbladedotdev/editor'
   >
     This site you're looking at now - Built with Astro, TypeScript and
     TailwindCSS.

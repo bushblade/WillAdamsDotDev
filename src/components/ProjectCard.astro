@@ -1,4 +1,5 @@
 ---
+import { getCloudinaryUrl } from '@utils/cloudinary'
 export interface Tech {
   url: string
   text: string
@@ -9,7 +10,7 @@ export interface Props {
   url: string
   repo: string
   tech: Tech[]
-  image?: string
+  image: string
 }
 
 const { title, url, repo, tech, image } = Astro.props
@@ -34,7 +35,11 @@ const { title, url, repo, tech, image } = Astro.props
           </div>
           <div class='aspect-video px-1 pb-2'>
             <img
-              src={image}
+              src={getCloudinaryUrl(image, {
+                width: 600,
+                format: 'avif',
+                quality: 80,
+              })}
               alt={title}
               class='h-full object-cover object-center m-auto'
             />
