@@ -4,6 +4,10 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
+      colors: {
+        // DaisyUI removed this colour, so adding it back
+        'neutral-focus': '#0d1c17',
+      },
       fontFamily: {
         fira: ['Fira Mono', ...defaultTheme.fontFamily.mono],
       },
