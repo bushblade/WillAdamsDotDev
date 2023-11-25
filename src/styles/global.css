@@ -1,0 +1,20 @@
+html {
+  --foreground: oklch(0.697764 0.135385 168.327);
+  --background: oklch(0.162032 0.007129 17.9116);
+  scrollbar-color: var(--foreground) var(--background); /* thumb and track color */
+  scrollbar-width: auto; /* 'auto', 'thin', or 'none' */
+}
+
+/* Customizes the whole scrollbar */
+::-webkit-scrollbar {
+  width: 4px; /* width of the entire scrollbar */
+}
+
+/* Customizes the background of the scrollbar track */
+::-webkit-scrollbar-track {
+  background: var(--background); /* color of the tracking area */
+}
+/* Customizes the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: var(--foreground); /* color of the scroll thumb */
+}
