@@ -14,13 +14,17 @@ const { frontmatter } = Astro.props
     format: 'webp',
   })}
 >
-  <img
-    src={getCloudinaryUrl(frontmatter.image.url, {
-      width: 800,
-      format: 'avif',
-    })}
-    alt={frontmatter.image.alt}
-  />
+  <div class='max-w-[800px] mx-auto aspect-video mb-10'>
+    <img
+      src={getCloudinaryUrl(frontmatter.image.url, {
+        width: 800,
+        format: 'avif',
+      })}
+      loading='lazy'
+      class='aspect-video mt-0'
+      alt={frontmatter.image.alt}
+    />
+  </div>
   <h1>{frontmatter.title}</h1>
   <slot />
 </Layout>
