@@ -1,7 +1,7 @@
 ---
 title: 'Closures in JavaScript'
 pubDate: 2023-08-16
-description: 'Closures in JavaScript: A concise exploration of closures, their benefits, and a simple example to illustrate the concept. Boost your JS skills with this foundational knowledge!'
+description: 'Closures in JavaScript: Their benefits, and a simple example to illustrate the concept. Boost your JS skills with some foundational knowledge!'
 author: 'Will Adams'
 image:
   url: 'bushbladedotdev/javascript-closures'
@@ -10,7 +10,7 @@ tags: ['javascript', 'fundamentals']
 draft: false
 ---
 
-Closures are a fundamental concept in JavaScript that often baffle newcomers. However, once grasped, they can become a powerful tool in a developer's toolkit. Let's dive in!
+Closures are a fundamental concept in JavaScript that often baffle newcomers. However, once grasped, they can become a powerful tool in a developer's toolkit.
 
 ## What is a Closure? 🔍
 
