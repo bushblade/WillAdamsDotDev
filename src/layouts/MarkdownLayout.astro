@@ -4,17 +4,30 @@ import Layout from './Layout.astro'
 import '@styles/mdstyles.css'
 
 const { frontmatter } = Astro.props
+
+const sizes = [320, 480, 640]
 ---
 
 <Layout
   title={frontmatter.title}
   metaDescription={frontmatter.description}
   metaImage={getCloudinaryUrl(frontmatter.image.url, {
-    width: 1200,
+    width: 800,
     format: 'webp',
   })}
 >
-  <div class='max-w-[800px] mx-auto aspect-video mb-10 w-full'>
+  <picture class='max-w-[800px] mx-auto aspect-video mb-10 w-full'>
+    {
+      sizes.map((size) => (
+        <source
+          media={`( max-width: ${size}px )`}
+          srcset={getCloudinaryUrl(frontmatter.image.url, {
+            width: size,
+            format: 'avif',
+          })}
+        />
+      ))
+    }
     <img
       src={getCloudinaryUrl(frontmatter.image.url, {
         width: 800,
@@ -24,7 +37,7 @@ const { frontmatter } = Astro.props
       class='aspect-video mt-0 w-full'
       alt={frontmatter.image.alt}
     />
-  </div>
+  </picture>
   <h1>{frontmatter.title}</h1>
   <slot />
 </Layout>
