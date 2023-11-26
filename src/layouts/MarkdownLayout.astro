@@ -14,6 +14,8 @@ const sizes = [320, 480, 640]
   metaImage={getCloudinaryUrl(frontmatter.image.url, {
     width: 1200,
     format: 'webp',
+    aspect_ratio: '16:9',
+    crop: 'fill',
   })}
 >
   <div
@@ -23,6 +25,8 @@ const sizes = [320, 480, 640]
         width: 16,
         format: 'avif',
         effect: 'blur',
+        aspect_ratio: '16:9',
+        crop: 'fill',
       })}')`,
       backgroundSize: 'cover',
     }}
@@ -35,6 +39,8 @@ const sizes = [320, 480, 640]
             srcset={getCloudinaryUrl(frontmatter.image.url, {
               width: size,
               format: 'avif',
+              aspect_ratio: '16:9',
+              crop: 'fill',
             })}
           />
         ))
@@ -43,9 +49,10 @@ const sizes = [320, 480, 640]
         src={getCloudinaryUrl(frontmatter.image.url, {
           width: 800,
           format: 'avif',
+          aspect_ratio: '16:9',
+          crop: 'fill',
         })}
-        loading='lazy'
-        class='aspect-video mt-0 w-full opacity-0 transition-opacity'
+        class='aspect-video mt-0 w-full animate-fade-in'
         alt={frontmatter.image.alt}
         id='main-img'
       />
@@ -54,10 +61,3 @@ const sizes = [320, 480, 640]
   <h1>{frontmatter.title}</h1>
   <slot />
 </Layout>
-
-<script>
-  const image = document.getElementById('main-img')
-  if (image) {
-    image.classList.add('opacity-100')
-  }
-</script>

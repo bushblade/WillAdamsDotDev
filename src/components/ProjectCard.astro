@@ -34,16 +34,32 @@ const { title, url, repo, tech, image } = Astro.props
             <div class='input'>{url}</div>
           </div>
           <div class='aspect-video px-1 pb-2 max-w-[600]'>
-            <img
-              src={getCloudinaryUrl(image, {
-                width: 600,
-                format: 'avif',
-                quality: 80,
-              })}
-              alt={title}
-              loading='lazy'
-              class='h-full object-cover object-center m-auto'
-            />
+            <div
+              style={{
+                backgroundImage: `url('${getCloudinaryUrl(image, {
+                  width: 16,
+                  format: 'avif',
+                  effect: 'blur',
+                  aspect_ratio: '16:9',
+                  crop: 'fill',
+                })}')`,
+                backgroundSize: 'cover',
+              }}
+              class='rounded'
+            >
+              <img
+                src={getCloudinaryUrl(image, {
+                  width: 600,
+                  format: 'avif',
+                  quality: 80,
+                  aspect_ratio: '16:9',
+                  crop: 'fill',
+                })}
+                alt={title}
+                loading='lazy'
+                class='h-full object-cover object-center m-auto animate-fade-in'
+              />
+            </div>
           </div>
         </div>
       </a>

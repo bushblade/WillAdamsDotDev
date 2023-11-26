@@ -13,6 +13,8 @@ const { frontmatter, url } = Astro.props
 const thumbnail = getCloudinaryUrl(frontmatter.image.url, {
   width: 400,
   format: 'avif',
+  aspect_ratio: '16:9',
+  crop: 'fill',
 })
 ---
 
@@ -31,11 +33,23 @@ const thumbnail = getCloudinaryUrl(frontmatter.image.url, {
       </div>
 
       <div class='flex items-center justify-center'>
-        <div class='aspect-video max-w-[400px] mb-5'>
+        <div
+          class='aspect-video max-w-[400px] mb-5 w-full'
+          style={{
+            backgroundImage: `url('${getCloudinaryUrl(frontmatter.image.url, {
+              width: 16,
+              format: 'avif',
+              effect: 'blur',
+              aspect_ratio: '16:9',
+              crop: 'fill',
+            })}')`,
+            backgroundSize: 'cover',
+          }}
+        >
           <img
             src={thumbnail}
             alt={frontmatter.image.alt}
-            class='rounded'
+            class='rounded animate-fade-in m-0'
             loading='lazy'
           />
         </div>
