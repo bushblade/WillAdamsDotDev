@@ -16,28 +16,48 @@ const sizes = [320, 480, 640]
     format: 'webp',
   })}
 >
-  <picture class='max-w-[800px] mx-auto aspect-video mb-10 w-full'>
-    {
-      sizes.map((size) => (
-        <source
-          media={`( max-width: ${size}px )`}
-          srcset={getCloudinaryUrl(frontmatter.image.url, {
-            width: size,
-            format: 'avif',
-          })}
-        />
-      ))
-    }
-    <img
-      src={getCloudinaryUrl(frontmatter.image.url, {
-        width: 800,
+  <div
+    class='max-w-[800px] mx-auto aspect-video mb-10 w-full bg-base-100 rounded'
+    style={{
+      backgroundImage: `url('${getCloudinaryUrl(frontmatter.image.url, {
+        width: 16,
         format: 'avif',
-      })}
-      loading='lazy'
-      class='aspect-video mt-0 w-full'
-      alt={frontmatter.image.alt}
-    />
-  </picture>
+        effect: 'blur',
+      })}')`,
+      backgroundSize: 'cover',
+    }}
+  >
+    <picture class='m-0'>
+      {
+        sizes.map((size) => (
+          <source
+            media={`( max-width: ${size}px )`}
+            srcset={getCloudinaryUrl(frontmatter.image.url, {
+              width: size,
+              format: 'avif',
+            })}
+          />
+        ))
+      }
+      <img
+        src={getCloudinaryUrl(frontmatter.image.url, {
+          width: 800,
+          format: 'avif',
+        })}
+        loading='lazy'
+        class='aspect-video mt-0 w-full opacity-0 transition-opacity'
+        alt={frontmatter.image.alt}
+        id='main-img'
+      />
+    </picture>
+  </div>
   <h1>{frontmatter.title}</h1>
   <slot />
 </Layout>
+
+<script>
+  const image = document.getElementById('main-img')
+  if (image) {
+    image.classList.add('opacity-100')
+  }
+</script>
