@@ -5,7 +5,7 @@ description: 'How to handle bad responses that include a JSON response and write
 author: 'Will Adams'
 image:
   url: 'bushbladedotdev/bad-response-with-fetch'
-  alt: 'The Astro logo with the word One.'
+  alt: 'Bad response with Fetch'
 tags: ['fetch', 'javascript']
 draft: false
 ---

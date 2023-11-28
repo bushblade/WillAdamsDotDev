@@ -1,11 +1,13 @@
 ---
-import { getCloudinaryUrl } from '@utils/cloudinary'
+import { getCloudinaryUrl, getPredominantColor } from '@utils/cloudinary'
 import Layout from './Layout.astro'
 import '@styles/mdstyles.css'
 
 const { frontmatter } = Astro.props
 
 const sizes = [320, 480, 640]
+
+const background = await getPredominantColor(frontmatter.image.url)
 ---
 
 <Layout
@@ -21,6 +23,7 @@ const sizes = [320, 480, 640]
   <div
     class='max-w-[800px] mx-auto aspect-video mb-10 w-full bg-base-100 rounded'
     style={{
+      background,
       backgroundImage: `url('${getCloudinaryUrl(frontmatter.image.url, {
         width: 16,
         format: 'avif',
@@ -52,7 +55,7 @@ const sizes = [320, 480, 640]
           aspect_ratio: '16:9',
           crop: 'fill',
         })}
-        class='aspect-video mt-0 w-full animate-fade-in'
+        class='aspect-video mt-0 w-full opacity-0 transition-opacity'
         alt={frontmatter.image.alt}
         id='main-img'
       />
@@ -61,3 +64,10 @@ const sizes = [320, 480, 640]
   <h1>{frontmatter.title}</h1>
   <slot />
 </Layout>
+
+<script>
+  import { transitionImage } from '@utils/domUtils'
+
+  const image = document.getElementById('main-img') as HTMLImageElement
+  transitionImage(image)
+</script>

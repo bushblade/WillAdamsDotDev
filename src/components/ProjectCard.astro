@@ -1,5 +1,5 @@
 ---
-import { getCloudinaryUrl } from '@utils/cloudinary'
+import { getCloudinaryUrl, getPredominantColor } from '@utils/cloudinary'
 export interface Tech {
   url: string
   text: string
@@ -14,6 +14,8 @@ export interface Props {
 }
 
 const { title, url, repo, tech, image } = Astro.props
+
+const background = await getPredominantColor(image)
 ---
 
 <article class='mb-10 px-4 pb-10 bg-base-200 rounded'>
@@ -36,6 +38,7 @@ const { title, url, repo, tech, image } = Astro.props
           <div class='aspect-video px-1 pb-2 max-w-[600]'>
             <div
               style={{
+                background,
                 backgroundImage: `url('${getCloudinaryUrl(image, {
                   width: 16,
                   format: 'avif',
@@ -45,7 +48,7 @@ const { title, url, repo, tech, image } = Astro.props
                 })}')`,
                 backgroundSize: 'cover',
               }}
-              class='rounded'
+              class='rounded h-full'
             >
               <img
                 src={getCloudinaryUrl(image, {
@@ -57,7 +60,8 @@ const { title, url, repo, tech, image } = Astro.props
                 })}
                 alt={title}
                 loading='lazy'
-                class='h-full object-cover object-center m-auto animate-fade-in'
+                class='h-full object-cover object-center m-auto w-full
+                card-image opacity-0 transition-opacity'
               />
             </div>
           </div>
@@ -84,3 +88,11 @@ const { title, url, repo, tech, image } = Astro.props
     }
   </div>
 </article>
+
+<script>
+  import { transitionImage } from '@utils/domUtils'
+
+  const images: NodeListOf<HTMLImageElement> =
+    document.querySelectorAll('img.card-image')
+  images.forEach(transitionImage)
+</script>

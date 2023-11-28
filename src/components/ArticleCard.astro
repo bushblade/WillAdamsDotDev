@@ -1,7 +1,7 @@
 ---
 import { formatDate } from '@utils/formatDate'
 import type { ArticleSchema } from '../schemas/articleSchema'
-import { getCloudinaryUrl } from '@utils/cloudinary'
+import { getCloudinaryUrl, getPredominantColor } from '@utils/cloudinary'
 
 export interface Props {
   url: string
@@ -16,6 +16,8 @@ const thumbnail = getCloudinaryUrl(frontmatter.image.url, {
   aspect_ratio: '16:9',
   crop: 'fill',
 })
+
+const background = await getPredominantColor(frontmatter.image.url)
 ---
 
 <article
@@ -34,8 +36,9 @@ const thumbnail = getCloudinaryUrl(frontmatter.image.url, {
 
       <div class='flex items-center justify-center'>
         <div
-          class='aspect-video max-w-[400px] mb-5 w-full'
+          class='aspect-video max-w-[400px] mb-5 w-full rounded'
           style={{
+            background,
             backgroundImage: `url('${getCloudinaryUrl(frontmatter.image.url, {
               width: 16,
               format: 'avif',
@@ -49,7 +52,7 @@ const thumbnail = getCloudinaryUrl(frontmatter.image.url, {
           <img
             src={thumbnail}
             alt={frontmatter.image.alt}
-            class='rounded animate-fade-in m-0'
+            class='rounded opacity-0 transition-opacity m-0 article-image'
             loading='lazy'
           />
         </div>
@@ -57,3 +60,11 @@ const thumbnail = getCloudinaryUrl(frontmatter.image.url, {
     </div>
   </a>
 </article>
+
+<script>
+  import { transitionImage } from '@utils/domUtils'
+
+  const images: NodeListOf<HTMLImageElement> =
+    document.querySelectorAll('img.article-image')
+  images.forEach(transitionImage)
+</script>
