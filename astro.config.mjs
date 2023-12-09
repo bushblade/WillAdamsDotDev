@@ -4,10 +4,12 @@ import rehypeExternalLinks from 'rehype-external-links'
 import rehypeSlug from 'rehype-slug'
 import { h } from 'hastscript'
 import AnchorIcon from './src/icons/anchor'
-
 import tailwind from '@astrojs/tailwind'
+import netlify from '@astrojs/netlify/functions'
 
+// https://astro.build/config
 export default defineConfig({
+  output: 'hybrid',
   markdown: {
     shikiConfig: {
       theme: 'dracula',
@@ -39,4 +41,5 @@ export default defineConfig({
     ],
   },
   integrations: [tailwind()],
+  adapter: netlify(),
 })
