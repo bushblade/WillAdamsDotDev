@@ -6,6 +6,12 @@ export async function GET() {
     JSON.stringify({
       number,
       message: `Here's a random number: ${number}`,
-    })
+    }),
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      },
+    }
   )
 }
