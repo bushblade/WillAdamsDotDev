@@ -8,6 +8,7 @@ import AnchorIcon from './src/icons/anchor'
 import tailwind from '@astrojs/tailwind'
 
 export default defineConfig({
+  prefetch: true,
   markdown: {
     shikiConfig: {
       theme: 'dracula',

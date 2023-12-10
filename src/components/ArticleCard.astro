@@ -24,7 +24,7 @@ const background = await getPredominantColor(frontmatter.image.url)
   class='bg-base-200 rounded outline outline-transparent outline-offset-0
   hover:outline-offset-4 outline-2 hover:outline-secondary transition-all px-5'
 >
-  <a href={url} class='no-underline block'>
+  <a href={url} class='no-underline block' data-astro-prefetch>
     <div class='grid md:grid-cols-2 gap-4'>
       <div class='text-base-content outline-0'>
         <h2 class='no-underline'>{frontmatter.title}</h2>

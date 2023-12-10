@@ -11,6 +11,7 @@ const links = ['about', 'projects', 'uses', 'articles']
   <ul>
     <li class='mx-1 hidden md:inline-flex'>
       <a
+        data-astro-prefetch
         aria-label='Link to the home page'
         class={`capitalize btn btn-ghost ${
           currentPath === ''
@@ -23,6 +24,7 @@ const links = ['about', 'projects', 'uses', 'articles']
       links.map((link) => (
         <li class='inline-flex md:mx-1'>
           <a
+            data-astro-prefetch
             aria-label={`Link to the ${link} page`}
             class={`capitalize btn btn-ghost btn-sm sm:btn-md ${
               currentPath.includes(link)
