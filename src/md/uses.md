@@ -20,7 +20,7 @@ Inspired by [Wes Bos](https://wesbos.com/) and [uses.tech](https://uses.tech/), 
 - **Monitors** 2 x Asus S24D330 24inch on home made stands
 - **Chair** [Boulies Elite](https://boulies.co.uk/products/elite-series)
 - **Headset** [Razer Nari](https://www.razer.com/ap-en/gaming-headsets/razer-nari)
-- **Phone** [Google Pixel 5](https://www.gsmarena.com/google_pixel_5-10386.php)
+- **Phone** [Google Pixel 8](https://store.google.com/gb/product/pixel_8?hl=en-GB)
 - **Watch** [Garmin Fenix 7 Sapphire Solar](https://www.garmin.com/en-GB/p/735520)
 
 ## Software
