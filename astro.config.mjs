@@ -8,6 +8,9 @@ import AnchorIcon from './src/icons/anchor'
 import tailwind from '@astrojs/tailwind'
 
 export default defineConfig({
+  experimental: {
+    contentIntellisense: true,
+  },
   prefetch: true,
   markdown: {
     shikiConfig: {
