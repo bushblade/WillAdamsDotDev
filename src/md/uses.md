@@ -30,7 +30,7 @@ Inspired by [Wes Bos](https://wesbos.com/) and [uses.tech](https://uses.tech/), 
 - **Command line tools**
   - [LazyGit](https://github.com/jesseduffield/lazygit) - version control
   - [nnn](https://github.com/jarun/nnn) - file manager
-  - [pnpm](https://pnpm.io/) - Node package manager
+  - [Yazi](https://github.com/sxyazi/yazi) - file manager
   - More in my [dotfiles](https://github.com/bushblade/dotfiles) here
 
 ## Podcasts
