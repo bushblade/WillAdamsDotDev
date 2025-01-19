@@ -74,7 +74,7 @@ Metamask wallets are used to store and transfer various cryptocurrencies like Et
 
 - **Public Statement**: This post serves as an official statement to clarify my position and warn others.
 - **Community Awareness**: I am sharing this issue on social media and development communities to spread awareness.
-- **Enhanced Security**: Going forward, I will sign all my commits with GPG to help verify their authenticity.
+- **Enhanced Security**: Going forward, I will [sign all my commits with GPG ](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits) to help verify their authenticity.
 
 ## How You Can Help 🤝
 
