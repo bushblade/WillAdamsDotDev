@@ -31,14 +31,14 @@ While forking open-source projects is perfectly legitimate, Cometec has misused 
 
 Below are examples of what developers have encountered, extracted from Telegram chats:
 
-![Telegram Screenshot 1](https://res.cloudinary.com/bushblade/image/upload/v1737212716/bushbladedotdev/cometec01.webp)
+![Telegram Screenshot 1](https://res.cloudinary.com/bushblade/image/upload/v1737212716/bushbladedotdev/cometec01.webp)  
 ![Telegram Screenshot 2](https://res.cloudinary.com/bushblade/image/upload/v1737212716/bushbladedotdev/malicious-one-line-code.webp)
 
 In these messages, developers have described:
 
 - Finding **malicious code** hidden within the project.
 - Being tricked into running code that compromised their systems.
-- Payment requests via **Tether (USDT)**, a cryptocurrency often used by scammers due to its pseudonymity.
+- Having their **cryptocurrency wallets compromised** due to stolen private keys.
 
 ## Key Points to Note 📝
 
@@ -54,11 +54,21 @@ In these messages, developers have described:
 3. **GitHub Is Aware**:
    - I have reported Cometec to GitHub, providing evidence of their actions. Unfortunately, their repository remains private, limiting my ability to investigate further.
 
+## The Cryptocurrency Exploit Explained 🔐
+
+Many of the developers affected by this scam were using Metamask, a popular cryptocurrency wallet. Here’s how Cometec’s malicious code likely operated:
+
+1. **Compromised Wallets**: The code targeted Metamask wallets by accessing cached or decrypted private keys when the wallet was unlocked in the browser.
+2. **Stolen Credentials**: Once the private keys were obtained, the scammers could sign transactions on the victim's behalf and steal their cryptocurrency.
+3. **Malicious Scripts**: The malicious scripts might have connected to a command-and-control (C2) server, enabling further exploitation, such as installing additional malware or directly transferring wallet data.
+
+Metamask wallets are used to store and transfer various cryptocurrencies like Ethereum, Tether, and USDC. These wallets rely on a seed phrase to generate private keys, which are critical to securing user funds.
+
 ## My Advice to Developers 🛠️
 
 - **Do Not Trust Cometec**: Avoid working with them, and do not run any code from their repositories.
+- **Secure Your Wallets**: If you use cryptocurrency wallets like Metamask, ensure they are locked when not in use and avoid running untrusted code in the same browser session.
 - **Verify Commit Authenticity**: Check for verified commits (e.g., those signed with GPG) when working with open-source projects.
-- **Be Cautious with Tether**: Cryptocurrency payments, especially in Tether, can be a red flag.
 
 ## Actions I Am Taking 🔒
 
@@ -75,6 +85,5 @@ In these messages, developers have described:
 
 Open-source projects thrive on trust and collaboration, but unfortunately, bad actors like Cometec exploit these values. I am committed to transparency and hope this post clears up any confusion. If you have any questions or concerns, feel free to reach out.
 
-Stay vigilant and safe,
-
+Stay vigilant and safe,  
 **Will Adams**
