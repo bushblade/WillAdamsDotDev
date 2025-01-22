@@ -5,6 +5,10 @@ html {
   scrollbar-width: auto; /* 'auto', 'thin', or 'none' */
 }
 
+html:hover {
+  scrollbar-color: var(--foreground) var(--background); /* thumb and track color */
+}
+
 /* Customizes the whole scrollbar */
 ::-webkit-scrollbar {
   width: 4px; /* width of the entire scrollbar */
