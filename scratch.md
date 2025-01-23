@@ -5,6 +5,7 @@ bad-response-with-fetch
 javascript-closures
 my-first-browser-extension
 random-number-generation-in-js
+cometec
 
 ## DaisyUI forest colours
 
