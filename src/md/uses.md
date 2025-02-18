@@ -25,7 +25,7 @@ Inspired by [Wes Bos](https://wesbos.com/) and [uses.tech](https://uses.tech/), 
 
 ## Software
 
-- **Terminal** Either [Wezterm](https://wezfurlong.org/wezterm/), [Kitty](https://sw.kovidgoyal.net/kitty/) or [Alacritty](https://alacritty.org/) with [Fish](https://fishshell.com/) shell and [Starship](https://starship.rs/) prompt. Paired with [Tmux](https://github.com/tmux/tmux) for splits/multiplexxing. Lately I am favouring Wezterm with a Tmux like config.
+- **Terminal** Either [Wezterm](https://wezfurlong.org/wezterm/) or [Alacritty](https://alacritty.org/) with [Fish](https://fishshell.com/) shell and [Starship](https://starship.rs/) prompt. Paired with [Tmux](https://github.com/tmux/tmux) for splits/multiplexxing. Lately I am favouring Wezterm with Tmux, though sometimes I use Wezterm splits, tabs and sessions instead, configured to match my Tmux keybindings.
 - **Editor** [Neovim](https://neovim.io/) - [config here](https://github.com/bushblade/nvim)
 - **Command line tools**
   - [LazyGit](https://github.com/jesseduffield/lazygit) - version control
@@ -38,3 +38,8 @@ Inspired by [Wes Bos](https://wesbos.com/) and [uses.tech](https://uses.tech/), 
 - [SyntaxFM](https://syntax.fm/)
 - [JavaScript Jabber](https://topenddevs.com/podcasts/javascript-jabber)
 - [Compressed FM](https://www.compressed.fm/)
+
+## Some favourite apps
+
+- [Endel](https://endel.io/)
+- [Lumenate](https://lumenategrowth.com/)
