@@ -25,7 +25,7 @@ Inspired by [Wes Bos](https://wesbos.com/) and [uses.tech](https://uses.tech/), 
 
 ## Software
 
-- **Terminal** Either [Wezterm](https://wezfurlong.org/wezterm/) or [Alacritty](https://alacritty.org/) with [Fish](https://fishshell.com/) shell and [Starship](https://starship.rs/) prompt. Paired with [Tmux](https://github.com/tmux/tmux) for splits/multiplexxing. Lately I am favouring Wezterm with Tmux, though sometimes I use Wezterm splits, tabs and sessions instead, configured to match my Tmux keybindings.
+- **Terminal** Either [Wezterm](https://wezfurlong.org/wezterm/) or [Alacritty](https://alacritty.org/) with [Fish](https://fishshell.com/) shell and [Starship](https://starship.rs/) prompt. Paired with [Tmux](https://github.com/tmux/tmux) for splits/multiplexxing. Lately I am favouring Wezterm with Tmux, though sometimes I use Wezterm splits, tabs and sessions instead, configured to match my Tmux keybindings. I've also been enjoying testing out [Ghostty](https://ghostty.org/) and may well switch to that full time.
 - **Editor** [Neovim](https://neovim.io/) - [config here](https://github.com/bushblade/nvim)
 - **Command line tools**
   - [LazyGit](https://github.com/jesseduffield/lazygit) - version control
