@@ -14,7 +14,7 @@ I want to address a recurring issue that has been brought to my attention over t
 
 ## Background 🕵️‍♂️
 
-The project at the center of this scam is Cometec’s **NFT Marketplace** repository (https://github.com/cometec/nft_marketplace), which is a fork of the **ProShop v2** repository (https://github.com/bradtraversy/proshop-v2). For context:
+The project at the center of this scam is Cometec’s [NFT Marketplace](https://github.com/cometec/nft_marketplace) repository, which is a fork of the [ProShop v2](https://github.com/bradtraversy/proshop-v2) repository. For context:
 
 - **ProShop v2** is the main project from Brad Traversy’s popular [MERN Ecommerce course](https://www.traversymedia.com/mern-stack-from-scratch).
 - I contributed to this project as part of my work with Traversy Media.
