@@ -17,7 +17,7 @@ Inspired by [Wes Bos](https://wesbos.com/) and [uses.tech](https://uses.tech/), 
 - **Desktop** Ryzen 5 3600x CPU, Radeon RX580 GPU, 32gb HyperX RAM running [Manjaro Linux](https://manjaro.org/) with the [Gnome](https://www.gnome.org/) desktop environemnt.
 - **Keyboard** [Durgod Hades](https://www.amazon.co.uk/Durgod-Hades-Mechanical-Gaming-Keyboard/dp/B08GZZYJ5W?th=1) with lubed cherry mx red switches and stabilisers, sound dampened case and [Tai-Hao Forest deep green PBT](https://mechkeyboards.co.uk/tai-hao-pbt-backlit-double-shot-forest-deep-green-140-keycap-set-1412-p.asp) key caps.
 - **Laptop** Lenovo Yoga 9i Intel i7 and 16gb RAM running [Manjaro Linux](https://manjaro.org/) with the [Gnome](https://www.gnome.org/) desktop environemnt.
-- **Monitors** 2 x Asus S24D330 24inch on home made stands
+- **Monitor** [LG 34WQ75C](https://www.lg.com/uk/monitors/ultrawide/34wq75c-b/)
 - **Chair** [Boulies Elite](https://boulies.co.uk/products/elite-series)
 - **Headset** [Razer Nari](https://www.razer.com/ap-en/gaming-headsets/razer-nari)
 - **Phone** [Google Pixel 8](https://store.google.com/gb/product/pixel_8?hl=en-GB)
