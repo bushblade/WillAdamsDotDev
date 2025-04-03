@@ -22,7 +22,7 @@ const background = await getPredominantColor(frontmatter.image.url)
 
 <article
   class='bg-base-200 rounded outline outline-transparent outline-offset-0
-  hover:outline-offset-4 outline-2 hover:outline-secondary transition-all px-5'
+  hover:outline-offset-4 hover:outline-secondary transition-all px-5'
 >
   <a href={url} class='no-underline block' data-astro-prefetch>
     <div class='grid md:grid-cols-2 gap-4'>
@@ -36,13 +36,13 @@ const background = await getPredominantColor(frontmatter.image.url)
 
       <div class='flex items-center justify-center'>
         <div
-          class='aspect-video max-w-[400px] mb-5 w-full rounded'
+          class='aspect-video max-w-[400px] mb-5 w-full rounded-sm'
           style={{
             background,
             backgroundImage: `url('${getCloudinaryUrl(frontmatter.image.url, {
               width: 16,
               format: 'avif',
-              effect: 'blur',
+              effect: 'blur-sm',
               aspect_ratio: '16:9',
               crop: 'fill',
             })}')`,
@@ -52,7 +52,7 @@ const background = await getPredominantColor(frontmatter.image.url)
           <img
             src={thumbnail}
             alt={frontmatter.image.alt}
-            class='rounded opacity-0 transition-opacity m-0 article-image'
+            class='rounded-sm opacity-0 transition-opacity article-image'
             loading='lazy'
           />
         </div>

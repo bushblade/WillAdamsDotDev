@@ -18,7 +18,7 @@ const { title, url, repo, tech, image } = Astro.props
 const background = await getPredominantColor(image)
 ---
 
-<article class='mb-10 px-4 pb-10 bg-base-200 rounded'>
+<article class='mb-10 px-4 pb-10 bg-base-200 rounded-sm'>
   <div class={`grid grid-cols-1 ${image ? 'md:grid-cols-2' : ''} gap-4`}>
     <div>
       <a href={url} target='_blank' class='link link-hover'>
@@ -35,20 +35,20 @@ const background = await getPredominantColor(image)
           <div class='mockup-browser-toolbar'>
             <div class='input'>{url}</div>
           </div>
-          <div class='aspect-video px-1 pb-2 max-w-[600]'>
+          <div class='aspect-video px-1 pb-2 max-w-600'>
             <div
               style={{
                 background,
                 backgroundImage: `url('${getCloudinaryUrl(image, {
                   width: 16,
                   format: 'avif',
-                  effect: 'blur',
+                  effect: 'blur-sm',
                   aspect_ratio: '16:9',
                   crop: 'fill',
                 })}')`,
                 backgroundSize: 'cover',
               }}
-              class='rounded h-full'
+              class='rounded-sm h-full'
             >
               <img
                 src={getCloudinaryUrl(image, {

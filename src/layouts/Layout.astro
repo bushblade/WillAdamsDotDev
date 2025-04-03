@@ -1,7 +1,7 @@
 ---
 import Footer from '@components/Footer.astro'
 import Header from '@components/Header.astro'
-import '../styles/global.css'
+import '@styles/global.css'
 
 export interface Props {
   title: string
@@ -47,11 +47,11 @@ const { title, metaDescription, metaImage } = Astro.props
     <title>{title}</title>
   </head>
   <body
-    class='min-h-screen font-fira bg-gradient-to-tr from-neutral-focus via-base-100 to-base-200 bg-fixed'
+    class='min-h-screen font-fira bg-linear-to-tr from-neutral-focus via-base-100 to-base-200 bg-fixed'
   >
     <Header />
     <main
-      class='max-w-4xl grid m-auto prose prose-a:link-accent prose-img:rounded lg:p-0 p-4 min-h-[30vh]'
+      class='max-w-4xl grid m-auto prose prose-a:link-accent prose-img:rounded prose-img:m-0 lg:p-0 p-4 min-h-[30vh]'
     >
       <slot />
     </main>

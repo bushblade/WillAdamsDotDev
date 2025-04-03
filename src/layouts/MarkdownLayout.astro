@@ -1,6 +1,7 @@
 ---
 import { getCloudinaryUrl, getPredominantColor } from '@utils/cloudinary'
 import Layout from './Layout.astro'
+import '@styles/global.css'
 import '@styles/mdstyles.css'
 
 const { frontmatter } = Astro.props
@@ -21,13 +22,13 @@ const background = await getPredominantColor(frontmatter.image.url)
   })}
 >
   <div
-    class='max-w-[800px] mx-auto aspect-video mb-10 w-full bg-base-100 rounded'
+    class='max-w-[800px] mx-auto aspect-video mb-10 w-full bg-base-100 rounded-sm'
     style={{
       background,
       backgroundImage: `url('${getCloudinaryUrl(frontmatter.image.url, {
         width: 16,
         format: 'avif',
-        effect: 'blur',
+        effect: 'blur-sm',
         aspect_ratio: '16:9',
         crop: 'fill',
       })}')`,

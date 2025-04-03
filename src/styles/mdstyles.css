@@ -1,6 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin "daisyui" {
+  themes: forest --default;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 /* styling for the anchor link in markdown */
 @layer components {
@@ -18,16 +37,16 @@
     @apply m-auto;
   }
   blockquote {
-    @apply bg-info-content text-info rounded mx-8;
+    @apply bg-info-content text-info rounded-sm mx-8;
   }
   aside {
-    @apply bg-info-content text-info rounded md:mx-8 p-6 border-l-4 border-info;
+    @apply bg-info-content text-info rounded-sm md:mx-8 p-6 border-l-4 border-info;
   }
   aside span {
     @apply font-bold;
   }
   code {
-    @apply bg-slate-800 text-slate-300 !rounded-sm !py-1;
+    @apply bg-slate-800 text-slate-300 rounded-xs! py-1!;
   }
 }
 

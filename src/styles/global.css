@@ -1,3 +1,32 @@
+@import 'tailwindcss';
+@plugin "daisyui" {
+  themes: forest --default;
+}
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --animate-fade-in: fadeIn 0.5s ease-out;
+
+  --color-neutral-focus: #0d1c17;
+
+  --font-fira:
+    Fira Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+
+  --background-image-gradient-radial: radial-gradient(
+    var(--gradient-color-stops)
+  );
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
 html {
   --foreground: oklch(0.697764 0.135385 168.327);
   --background: oklch(0.162032 0.007129 17.9116);
