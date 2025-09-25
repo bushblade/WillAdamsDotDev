@@ -14,7 +14,7 @@ Inspired by [Wes Bos](https://wesbos.com/) and [uses.tech](https://uses.tech/), 
 
 ## Hardware
 
-- **Desktop** Ryzen 5 3600x CPU, Radeon RX580 GPU, 32gb HyperX RAM running [Manjaro Linux](https://manjaro.org/) with the [Gnome](https://www.gnome.org/) desktop environemnt.
+- **Desktop** Ryzen 5 5600x CPU, Radeon RX7600 GPU, 32gb RAM running [Manjaro Linux](https://manjaro.org/) with the [Gnome](https://www.gnome.org/) desktop environemnt.
 - **Keyboard** [Durgod Hades](https://www.amazon.co.uk/Durgod-Hades-Mechanical-Gaming-Keyboard/dp/B08GZZYJ5W?th=1) with lubed cherry mx red switches and stabilisers, sound dampened case and [Tai-Hao Forest deep green PBT](https://mechkeyboards.co.uk/tai-hao-pbt-backlit-double-shot-forest-deep-green-140-keycap-set-1412-p.asp) key caps.
 - **Laptop** Lenovo Yoga 9i Intel i7 and 16gb RAM running [Manjaro Linux](https://manjaro.org/) with the [Gnome](https://www.gnome.org/) desktop environemnt.
 - **Monitor** [LG 34WQ75C](https://www.lg.com/uk/monitors/ultrawide/34wq75c-b/)
@@ -25,7 +25,7 @@ Inspired by [Wes Bos](https://wesbos.com/) and [uses.tech](https://uses.tech/), 
 
 ## Software
 
-- **Terminal** Either [Wezterm](https://wezfurlong.org/wezterm/) or [Alacritty](https://alacritty.org/) with [Fish](https://fishshell.com/) shell and [Starship](https://starship.rs/) prompt. Paired with [Tmux](https://github.com/tmux/tmux) for splits/multiplexxing. Lately I am favouring Wezterm with Tmux, though sometimes I use Wezterm splits, tabs and sessions instead, configured to match my Tmux keybindings. I've also been enjoying testing out [Ghostty](https://ghostty.org/) and may well switch to that full time.
+- **Terminal** [Ghostty](https://ghostty.org/) with [Fish](https://fishshell.com/) shell and [Starship](https://starship.rs/) prompt. Paired with [Tmux](https://github.com/tmux/tmux) for splits/multiplexxing.
 - **Editor** [Neovim](https://neovim.io/) - [config here](https://github.com/bushblade/nvim)
 - **Command line tools**
   - [LazyGit](https://github.com/jesseduffield/lazygit) - version control
