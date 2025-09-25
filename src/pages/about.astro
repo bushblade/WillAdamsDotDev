@@ -1,14 +1,26 @@
 ---
 import Layout from '@layouts/Layout.astro'
+const birthDate = new Date('1977-02-09')
+
+const today = new Date()
+
+let age = today.getFullYear() - birthDate.getFullYear()
+
+const monthDifference = today.getMonth() - birthDate.getMonth()
+const dayDifference = today.getDate() - birthDate.getDate()
+
+if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
+  age-- // Decrement the age by 1
+}
 ---
 
 <Layout title='About Me' metaDescription='All about Will Adams'>
   <h1>A little <span class='text-primary'>more</span> about me!</h1>
   <p>
-    Hi there, I'm <strong>Will Adams</strong> - I'm 47 years of age with a
-    diverse range of interests and experiences that have led me to develop a
-    broad skill set, including web development, knife making, Bushcraft and
-    climbing.
+    Hi there, I'm <strong>Will Adams</strong> - I'm {age} years of age with a fairly
+    diverse range of interests and experiences that have led me to develop a broad
+    skill set, including web development, knife making, Bushcraft, hiking, camping
+    and climbing.
   </p>
 
   <p>
@@ -16,9 +28,9 @@ import Layout from '@layouts/Layout.astro'
       href='https://bushblade.co.uk'
       target='_blank'>knife making</a
     >
-     business and needed a website to showcase my work. I attended an adult
-    learning course teaching the basics using Dreamweaver, but quickly worked
-    out you can do much more writing the code yourself!
+    business and needed a website to showcase my work. I attended an adult learning
+    course teaching the basics using Dreamweaver, but quickly worked out you can
+    do much more writing the code yourself!
   </p>
   <p>
     Since then, I've taken more than a few Udemy courses, online tutorials,
@@ -35,8 +47,7 @@ import Layout from '@layouts/Layout.astro'
     the
     <a href='https://www.westyorkshirebushcraft.co.uk/' target='_blank'>
       West Yorkshire Bushcraft</a
-    > group, where I share my skills and knowledge with other outdoor
-    enthusiasts.
+    > group, where I share my skills and knowledge with other outdoor enthusiasts.
   </p>
 
   <p>
@@ -44,9 +55,9 @@ import Layout from '@layouts/Layout.astro'
     professional life, and I enjoy sharing my knowledge with others.
   </p>
   <p>
-    <strong>Support me:</strong> Maybe I've helped you on a course or helped
-    solve an issue in your own project? If you're feeling like showing some
-    support then you can
+    <strong>Support me:</strong> Maybe I've helped you on a course or helped solve
+    an issue in your own project? If you're feeling like showing some support then
+    you can
     <a href='https://ko-fi.com/willadams' target='_blank'>Buy Me a coffee</a>
   </p>
 </Layout>
