@@ -19,7 +19,7 @@ Inspired by [Wes Bos](https://wesbos.com/) and [uses.tech](https://uses.tech/), 
 - **Laptop** Lenovo Yoga 9i Intel i7 and 16gb RAM running [Manjaro Linux](https://manjaro.org/) with the [Gnome](https://www.gnome.org/) desktop environemnt.
 - **Monitor** [LG 34WQ75C](https://www.lg.com/uk/monitors/ultrawide/34wq75c-b/)
 - **Chair** [Boulies Elite](https://boulies.co.uk/products/elite-series)
-- **Headset** [Razer Nari](https://www.razer.com/ap-en/gaming-headsets/razer-nari)
+- **Headset** [Steel Series Arctis Nova 7](https://steelseries.com/en-gb/gaming-headsets/arctis-nova-7?color=black&primaryPlatform=pc)
 - **Phone** [Google Pixel 8](https://store.google.com/gb/product/pixel_8?hl=en-GB)
 - **Watch** [Garmin Fenix 7 Sapphire Solar](https://www.garmin.com/en-GB/p/735520)
 
