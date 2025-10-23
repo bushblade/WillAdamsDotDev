@@ -27,10 +27,14 @@ Inspired by [Wes Bos](https://wesbos.com/) and [uses.tech](https://uses.tech/), 
 
 - **Terminal** [Ghostty](https://ghostty.org/) with [Fish](https://fishshell.com/) shell and [Starship](https://starship.rs/) prompt. Paired with [Tmux](https://github.com/tmux/tmux) for splits/multiplexxing.
 - **Editor** [Neovim](https://neovim.io/) - [config here](https://github.com/bushblade/nvim)
+- **Gnome Extensions**
+  - [PaperWM](https://extensions.gnome.org/extension/6099/paperwm/) Tiling window manager with a twist
+  - [VShell](https://extensions.gnome.org/extension/5177/vertical-workspaces/) Vertical workspace layout and overview
 - **Command line tools**
   - [LazyGit](https://github.com/jesseduffield/lazygit) - version control
   - [nnn](https://github.com/jarun/nnn) - file manager
   - [Yazi](https://github.com/sxyazi/yazi) - file manager
+  - [Gemini CLI](https://github.com/google-gemini/gemini-cli)
   - More in my [dotfiles](https://github.com/bushblade/dotfiles) here
 
 ## Podcasts
