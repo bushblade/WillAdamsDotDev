@@ -21,7 +21,7 @@ const background = await getPredominantColor(image)
 <article class='mb-10 px-4 pb-10 bg-base-200 rounded-sm'>
   <div class={`grid grid-cols-1 ${image ? 'md:grid-cols-2' : ''} gap-4`}>
     <div>
-      <a href={url} target='_blank' class='link link-hover'>
+      <a href={url} target='_blank' class='no-underline link link-hover'>
         <h2 class=''>{title}</h2>
       </a>
       <p><slot /></p>
@@ -29,7 +29,7 @@ const background = await getPredominantColor(image)
     <div class='py-4'>
       <a href={url} target='_blank block'>
         <div
-          class='mockup-browser outline outline-neutral outline-offset-0 hover:outline-offset-4 outline-2
+          class='mockup-browser outline-neutral outline-offset-0 hover:outline-offset-4 outline-2
               hover:outline-secondary transition-all rounded'
         >
           <div class='mockup-browser-toolbar'>
