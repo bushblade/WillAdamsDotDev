@@ -42,7 +42,7 @@ const background = await getPredominantColor(frontmatter.image.url)
             backgroundImage: `url('${getCloudinaryUrl(frontmatter.image.url, {
               width: 16,
               format: 'avif',
-              effect: 'blur-sm',
+              effect: 'blur:100',
               aspect_ratio: '16:9',
               crop: 'fill',
             })}')`,
