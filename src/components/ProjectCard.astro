@@ -59,6 +59,7 @@ const background = await getPredominantColor(image)
                   crop: 'fill',
                 })}
                 alt={title}
+                id={image}
                 loading='lazy'
                 class='h-full object-cover object-center m-auto w-full
                 card-image opacity-0 transition-opacity'
@@ -88,11 +89,3 @@ const background = await getPredominantColor(image)
     }
   </div>
 </article>
-
-<script>
-  import { transitionImage } from '@utils/domUtils'
-
-  const images: NodeListOf<HTMLImageElement> =
-    document.querySelectorAll('img.card-image')
-  images.forEach(transitionImage)
-</script>

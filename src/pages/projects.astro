@@ -93,3 +93,11 @@ const tech = {
     TailwindCSS.
   </ProjectCard>
 </Layout>
+
+<script>
+  import { transitionImage } from '@utils/domUtils'
+
+  const images: NodeListOf<HTMLImageElement> =
+    document.querySelectorAll('img.card-image')
+  images.forEach(transitionImage)
+</script>

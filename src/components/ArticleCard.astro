@@ -60,11 +60,3 @@ const background = await getPredominantColor(frontmatter.image.url)
     </div>
   </a>
 </article>
-
-<script>
-  import { transitionImage } from '@utils/domUtils'
-
-  const images: NodeListOf<HTMLImageElement> =
-    document.querySelectorAll('img.article-image')
-  images.forEach(transitionImage)
-</script>

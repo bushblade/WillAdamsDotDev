@@ -34,3 +34,11 @@ const articlesSortedByDate = articles.sort(
     }
   </div>
 </Layout>
+
+<script>
+  import { transitionImage } from '@utils/domUtils'
+
+  const images: NodeListOf<HTMLImageElement> =
+    document.querySelectorAll('img.article-image')
+  images.forEach(transitionImage)
+</script>
