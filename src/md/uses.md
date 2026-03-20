@@ -14,7 +14,7 @@ Inspired by [Wes Bos](https://wesbos.com/) and [uses.tech](https://uses.tech/), 
 
 ## Hardware
 
-- **Desktop** Ryzen 5 5600x CPU, Radeon RX7600 GPU, 32gb RAM running [Manjaro Linux](https://manjaro.org/) with the [Dank Material Shell](https://danklinux.com/) and [Niri](https://yalter.github.io/niri/) window manager.
+- **Desktop** Ryzen 5 5600x CPU, Radeon RX7600 GPU, 32gb RAM running [CachyOS](https://cachyos.org/) with the [Dank Material Shell](https://danklinux.com/) and [Niri](https://yalter.github.io/niri/) window manager.
 - **Keyboard** [Durgod Hades](https://www.amazon.co.uk/Durgod-Hades-Mechanical-Gaming-Keyboard/dp/B08GZZYJ5W?th=1) with lubed cherry mx red switches and stabilisers, sound dampened case and [Tai-Hao Forest deep green PBT](https://mechkeyboards.co.uk/tai-hao-pbt-backlit-double-shot-forest-deep-green-140-keycap-set-1412-p.asp) key caps.
 - **Laptop** Lenovo Yoga 9i Intel i7 and 16gb RAM running [Manjaro Linux](https://manjaro.org/) with the [Dank Material Shell](https://danklinux.com/) and [Niri](https://yalter.github.io/niri/) window manager.
 - **Monitor** [LG 34WQ75C](https://www.lg.com/uk/monitors/ultrawide/34wq75c-b/)
