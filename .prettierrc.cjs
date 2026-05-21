@@ -5,10 +5,10 @@ module.exports = {
   semi: false,
   singleQuote: true,
   bracketSpacing: true,
-  jsxBracketSameLine: false,
+  bracketSameLine: false,
   jsxSingleQuote: true,
   trailingComma: "es5",
-  arrowFunctionParentheses: "avoid",
+  arrowParens: "avoid",
   plugins: [require.resolve("prettier-plugin-astro")],
   overrides: [
     {

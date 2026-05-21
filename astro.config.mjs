@@ -8,10 +8,6 @@ import AnchorIcon from './src/icons/anchor'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  experimental: {
-    contentIntellisense: true,
-  },
-
   prefetch: true,
 
   markdown: {

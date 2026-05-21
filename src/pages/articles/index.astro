@@ -25,10 +25,10 @@ const articlesSortedByDate = articles.sort(
   </p>
   <div class='mt-16 grid grid-cols-1 gap-10'>
     {
-      articlesSortedByDate.map((article) => (
+      articlesSortedByDate.map(article => (
         <ArticleCard
           frontmatter={article.data}
-          url={'/articles/' + article.slug}
+          url={'/articles/' + article.id}
         />
       ))
     }

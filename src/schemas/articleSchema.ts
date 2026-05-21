@@ -1,16 +1,9 @@
-import { z } from 'astro:content'
-
-export const articleSchema = z.object({
-  title: z.string(),
-  pubDate: z.date(),
-  description: z.string(),
-  author: z.string(),
-  image: z.object({
-    url: z.string(),
-    alt: z.string(),
-  }),
-  tags: z.array(z.string()),
-  draft: z.boolean(),
-})
-
-export type ArticleSchema = z.infer<typeof articleSchema>
+export interface ArticleSchema {
+  title: string
+  pubDate: Date
+  description: string
+  author: string
+  image: { url: string; alt: string }
+  tags: string[]
+  draft: boolean
+}

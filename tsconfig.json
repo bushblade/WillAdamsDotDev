@@ -1,10 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "strictNullChekcks": true,
-    "types": ["@astrojs/image/client"],
-    "jsx": "preserve",
-    "baseUrl": ".",
+    "strictNullChecks": true,
     "paths": {
       "@components/*": ["src/components/*"],
       "@scripts/*": ["src/scripts/*"],
@@ -12,7 +9,6 @@
       "@icons/*": ["src/icons/*"],
       "@styles/*": ["src/styles/*"],
       "@utils/*": ["src/utils/*"]
-    },
-    "jsxImportSource": "solid-js"
+    }
   }
 }
