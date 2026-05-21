@@ -39,6 +39,14 @@ const tech = {
     url: 'https://react.dev/',
     text: 'React',
   },
+  javascript: {
+    url: 'https://ecma-international.org/publications-and-standards/standards/ecma-262/',
+    text: 'VanillaJS',
+  },
+  jsdoc: {
+    url: 'https://jsdoc.app/',
+    text: 'JSdoc',
+  },
 }
 ---
 
@@ -91,6 +99,18 @@ const tech = {
   >
     This site you're looking at now - Built with Astro, TypeScript and
     TailwindCSS.
+  </ProjectCard>
+
+  <ProjectCard
+    url="https://addons.mozilla.org/en-US/firefox/addon/traversy-scroll-active-lesson/"
+    title="TraversyMedia browser extension"
+    repo="https://github.com/bushblade/TraversyMediaScrollActiveLesson"
+    tech={[tech.javascript, tech.jsdoc]}
+    image="bushbladedotdev/extension-after"
+  >
+    Improves the user experience for the students of Traversy Media in the
+    <a href="https://traversymedia.com" target="_blank">traversymedia</a>
+    course platform.
   </ProjectCard>
 </Layout>
 
