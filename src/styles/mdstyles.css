@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin "daisyui" {
   themes: forest --default;
 }
@@ -27,6 +27,9 @@
     @apply md:flex md:items-center md:gap-2;
     @apply md:scroll-mt-16;
   }
+  aside span {
+    @apply font-bold;
+  }
   *:is(h1, h2, h3, h4, h5, h6) > a > span {
     @apply invisible;
   }
@@ -41,9 +44,6 @@
   }
   aside {
     @apply bg-info-content text-info rounded-sm md:mx-8 p-6 border-l-4 border-info;
-  }
-  aside span {
-    @apply font-bold;
   }
   code {
     @apply bg-slate-800 text-slate-300 rounded-xs! py-1!;

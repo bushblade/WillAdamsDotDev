@@ -1,6 +1,6 @@
 ---
-import Layout from '@layouts/Layout.astro'
 import ProjectCard from '@components/ProjectCard.astro'
+import Layout from '@layouts/Layout.astro'
 
 const tech = {
   typeScript: {
@@ -42,14 +42,14 @@ const tech = {
 }
 ---
 
-<Layout title='Projects'>
-  <h1>Some stuff built by <span class='text-primary'>Me</span></h1>
+<Layout title="Projects">
+  <h1>Some stuff built by <span class="text-primary">Me</span></h1>
   <ProjectCard
-    url='https://bushblade.co.uk'
-    title='Bushblade Knives Website'
-    repo='https://github.com/bushblade/bushblade-knives-website'
+    url="https://bushblade.co.uk"
+    title="Bushblade Knives Website"
+    repo="https://github.com/bushblade/bushblade-knives-website"
     tech={[tech.gatsby, tech.styledComponents, tech.netlify, tech.reactSpring]}
-    image='bushbladedotdev/bushblade-knives'
+    image="bushbladedotdev/bushblade-knives"
   >
     Created out of a need for a site to showcase my work as a Knife Maker and
     the project that set me on my web development journey. The site has
@@ -59,11 +59,11 @@ const tech = {
   </ProjectCard>
 
   <ProjectCard
-    url='https://www.npmjs.com/package/react-touch-drag-slider'
-    title='React Touch & Drag Slider'
-    repo='https://github.com/bushblade/react-touch-drag-slider'
+    url="https://www.npmjs.com/package/react-touch-drag-slider"
+    title="React Touch & Drag Slider"
+    repo="https://github.com/bushblade/react-touch-drag-slider"
     tech={[tech.react, tech.vite, tech.typeScript]}
-    image='bushbladedotdev/slider'
+    image="bushbladedotdev/slider"
   >
     A touch friendly slider component for React with zero dependencies,
     originally made for Bushblade Knives but I decided to publish to the npm
@@ -71,11 +71,11 @@ const tech = {
   </ProjectCard>
 
   <ProjectCard
-    url='https://www.westyorkshirebushcraft.co.uk/'
-    title='West Yorkshire Bushcraft Website'
-    repo='https://github.com/bushblade/WYB'
+    url="https://www.westyorkshirebushcraft.co.uk/"
+    title="West Yorkshire Bushcraft Website"
+    repo="https://github.com/bushblade/WYB"
     tech={[tech.gatsby, tech.reactSpring, tech.netlify]}
-    image='bushbladedotdev/wyb-website'
+    image="bushbladedotdev/wyb-website"
   >
     Built for my Bushcraft group to show the sort of things we get up to and
     help people find us. Built using Gatsby and Styled Components, animations
@@ -83,11 +83,11 @@ const tech = {
   </ProjectCard>
 
   <ProjectCard
-    url='https://willadams.dev/'
-    title='This site!'
-    repo='https://github.com/bushblade/WillAdamsDotDev'
+    url="https://willadams.dev/"
+    title="This site!"
+    repo="https://github.com/bushblade/WillAdamsDotDev"
     tech={[tech.astro, tech.typeScript, tech.tailwind, tech.netlify]}
-    image='bushbladedotdev/editor'
+    image="bushbladedotdev/editor"
   >
     This site you're looking at now - Built with Astro, TypeScript and
     TailwindCSS.
@@ -95,9 +95,9 @@ const tech = {
 </Layout>
 
 <script>
-  import { transitionImage } from '@utils/domUtils'
+import { transitionImage } from '@utils/domUtils'
 
-  const images: NodeListOf<HTMLImageElement> =
-    document.querySelectorAll('img.card-image')
-  images.forEach(transitionImage)
+const images: NodeListOf<HTMLImageElement> =
+  document.querySelectorAll('img.card-image')
+images.forEach(transitionImage)
 </script>

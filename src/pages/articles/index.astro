@@ -14,31 +14,29 @@ const articlesSortedByDate = articles.sort(
 ---
 
 <Layout
-  title='WillAdamsDotDev'
-  metaDescription='UK based developer and knife maker'
-  metaImage='https://res.cloudinary.com/bushblade/image/upload/f_webp/q_auto/bushbladedotdev/ogimage.jpg'
+  title="WillAdamsDotDev"
+  metaDescription="UK based developer and knife maker"
+  metaImage="https://res.cloudinary.com/bushblade/image/upload/f_webp/q_auto/bushbladedotdev/ogimage.jpg"
 >
-  <h1><span class='text-primary'>/</span>articles</h1>
+  <h1><span class="text-primary">/</span>articles</h1>
   <p>
     Maybe you will find some useful stuff to read about here, but more than
     likely its just a place for me to reference the things future me forgets!
   </p>
-  <div class='mt-16 grid grid-cols-1 gap-10'>
-    {
-      articlesSortedByDate.map(article => (
+  <div class="mt-16 grid grid-cols-1 gap-10">
+    {articlesSortedByDate.map(article => (
         <ArticleCard
           frontmatter={article.data}
-          url={'/articles/' + article.id}
+          url={`/articles/${article.id}`}
         />
-      ))
-    }
+      ))}
   </div>
 </Layout>
 
 <script>
-  import { transitionImage } from '@utils/domUtils'
+import { transitionImage } from '@utils/domUtils'
 
-  const images: NodeListOf<HTMLImageElement> =
-    document.querySelectorAll('img.article-image')
-  images.forEach(transitionImage)
+const images: NodeListOf<HTMLImageElement> =
+  document.querySelectorAll('img.article-image')
+images.forEach(transitionImage)
 </script>

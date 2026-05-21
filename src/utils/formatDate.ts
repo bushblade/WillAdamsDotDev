@@ -18,9 +18,9 @@ export function formatDate(date: Date): string {
     lastNum === '1'
       ? 'st'
       : lastNum === '2'
-      ? 'nd'
-      : lastNum === '3'
-      ? 'rd'
-      : 'th'
+        ? 'nd'
+        : lastNum === '3'
+          ? 'rd'
+          : 'th'
   return [`${day}${suffix}`, ...rest].join(' ')
 }

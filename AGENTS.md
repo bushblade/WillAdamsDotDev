@@ -39,23 +39,21 @@ pnpm run preview       # serve built dist/
 
 ## Linting & formatting
 ```sh
-pnpm exec astro check   # type-check Astro files
-pnpm exec eslint src/   # lint (astro-eslint, JSX a11y rules)
-pnpm exec prettier src/ --check
+pnpm exec astro check     # type-check Astro files
+pnpm exec biome check src/   # lint + format check
+pnpm exec biome check --write src/   # apply fixes
 ```
-Astro-specific: `.astro` files use the `astro` Prettier parser via `prettier-plugin-astro`.
 
 ## Config reference
 | File | Purpose |
 |---|---|
 | `astro.config.mjs` | Astro config, rehype plugins (slugs, autolink headings, external links in new tabs), Shiki Dracula theme |
 | `tsconfig.json` | Extends `astro/tsconfigs/strict`, path aliases |
-| `.prettierrc.cjs` | No semis, single quotes, trailing commas (es5), printWidth 80, Prettier plugin for Astro |
-| `eslint.config.js` | `eslint-plugin-astro` recommended rules, `eslint-plugin-jsx-a11y` |
+| `biome.json` | Biome config: no semis, single quotes, trailing commas (es5), printWidth 80, Astro experimental full support, a11y lint rules |
 | `package.json` | ESM (`"type": "module"`) |
 
 ## Key conventions
-- No semicolons in JS/TS (Prettier enforced).
+- No semicolons in JS/TS (Biome enforced).
 - Single quotes everywhere (including JSX).
 - Tailwind classes used heavily in templates.
 - Dates formatted via `Intl.DateTimeFormat` (en-GB) + custom ordinal suffix — no date library.

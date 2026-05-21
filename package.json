@@ -7,7 +7,10 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "biome format --write src/",
+    "lint": "biome lint src/",
+    "check": "biome check src/"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",
@@ -23,14 +26,8 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
+    "@biomejs/biome": "2.4.15",
     "@tailwindcss/typography": "^0.5.19",
-    "@typescript-eslint/parser": "^8.59.4",
-    "astro-eslint-parser": "^1.4.0",
-    "eslint": "^10.4.0",
-    "eslint-plugin-astro": "^1.7.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "prettier": "^3.8.3",
-    "prettier-plugin-astro": "^0.14.1",
     "typescript": "^6.0.3"
   },
   "engines": {

@@ -13,45 +13,45 @@ const { title, metaDescription, metaImage } = Astro.props
 ---
 
 <!doctype html>
-<html lang='en' class='scroll-smooth'>
+<html lang="en" class="scroll-smooth">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width' />
-    <meta property='og:title' content={title} />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:title" content={title}>
     <meta
-      property='og:description'
+      property="og:description"
       content={metaDescription
         ? metaDescription
         : 'UK based developer and knife maker'}
-    />
+    >
     <meta
-      name='description'
+      name="description"
       content={metaDescription
         ? metaDescription
         : 'UK based developer and knife maker'}
-    />
+    >
     <meta
-      property='og:image'
+      property="og:image"
       content={metaImage
         ? metaImage
         : 'https://res.cloudinary.com/bushblade/image/upload/c_scale,w_1200/f_webp/q_auto/bushbladedotdev/ogimage.jpg'}
-    />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <link rel='preconnect' href='https://fonts.googleapis.com' />
-    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    >
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href='https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap'
-      rel='stylesheet'
-    />
-    <meta name='generator' content={Astro.generator} />
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    >
+    <meta name="generator" content={Astro.generator}>
     <title>{title}</title>
   </head>
   <body
-    class='min-h-screen font-fira bg-linear-to-tr from-neutral-focus via-base-100 to-base-200 bg-fixed'
+    class="min-h-screen font-fira bg-linear-to-tr from-neutral-focus via-base-100 to-base-200 bg-fixed"
   >
     <Header />
     <main
-      class='max-w-4xl grid m-auto prose prose-a:link-accent prose-a:text-accent prose-img:rounded prose-img:m-0 lg:p-0 p-4 min-h-[30vh]'
+      class="max-w-4xl grid m-auto prose prose-a:link-accent prose-a:text-accent prose-img:rounded prose-img:m-0 lg:p-0 p-4 min-h-[30vh]"
     >
       <slot />
     </main>

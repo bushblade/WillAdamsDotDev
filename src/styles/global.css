@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin "daisyui" {
   themes: forest --default;
 }
@@ -11,7 +11,7 @@
 
   --font-fira:
     Fira Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace;
+    "Liberation Mono", "Courier New", monospace;
 
   --background-image-gradient-radial: radial-gradient(
     var(--gradient-color-stops)

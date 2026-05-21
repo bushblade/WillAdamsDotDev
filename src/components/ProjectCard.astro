@@ -18,24 +18,24 @@ const { title, url, repo, tech, image } = Astro.props
 const background = await getPredominantColor(image)
 ---
 
-<article class='mb-10 px-4 pb-10 bg-base-200 rounded-sm'>
+<article class="mb-10 px-4 pb-10 bg-base-200 rounded-sm">
   <div class={`grid grid-cols-1 ${image ? 'md:grid-cols-2' : ''} gap-4`}>
     <div>
-      <a href={url} target='_blank' class='no-underline link link-hover'>
-        <h2 class=''>{title}</h2>
+      <a href={url} target="_blank" class="no-underline link link-hover">
+        <h2 class="">{title}</h2>
       </a>
       <p><slot /></p>
     </div>
-    <div class='py-4'>
-      <a href={url} target='_blank block'>
+    <div class="py-4">
+      <a href={url} target="_blank block">
         <div
-          class='mockup-browser outline-neutral outline-offset-0 hover:outline-offset-4 outline-2
-              hover:outline-secondary transition-all rounded'
+          class="mockup-browser outline-neutral outline-offset-0 hover:outline-offset-4 outline-2
+              hover:outline-secondary transition-all rounded"
         >
-          <div class='mockup-browser-toolbar'>
-            <div class='input'>{url}</div>
+          <div class="mockup-browser-toolbar">
+            <div class="input">{url}</div>
           </div>
-          <div class='aspect-video px-1 pb-2 max-w-600'>
+          <div class="aspect-video px-1 pb-2 max-w-600">
             <div
               style={{
                 background,
@@ -48,7 +48,7 @@ const background = await getPredominantColor(image)
                 })}')`,
                 backgroundSize: 'cover',
               }}
-              class='rounded-sm h-full'
+              class="rounded-sm h-full"
             >
               <img
                 src={getCloudinaryUrl(image, {
@@ -60,32 +60,31 @@ const background = await getPredominantColor(image)
                 })}
                 alt={title}
                 id={image}
-                loading='lazy'
-                class='h-full object-cover object-center m-auto w-full
-                card-image opacity-0 transition-opacity'
-              />
+                loading="lazy"
+                class="h-full object-cover object-center m-auto w-full
+                card-image opacity-0 transition-opacity"
+              >
             </div>
           </div>
         </div>
       </a>
     </div>
   </div>
-  <a href={repo} target='_blank' class='text-lg link link-accent link-hover'
+  <a href={repo} target="_blank" class="text-lg link link-accent link-hover"
     >Repository link</a
   >
   <h3>Tech stack used</h3>
   <div>
-    {
-      tech.map(({ url, text }) => (
+    {tech.map(({ url, text }) => (
         <a
           href={url}
           target='_blank'
+          rel='noopener'
           aria-label={`Link to ${text}`}
           class='btn btn-neutral btn-sm no-underline m-1'
         >
           {text}
         </a>
-      ))
-    }
+      ))}
   </div>
 </article>

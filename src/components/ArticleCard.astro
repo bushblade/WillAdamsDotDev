@@ -1,7 +1,7 @@
 ---
+import { getCloudinaryUrl, getPredominantColor } from '@utils/cloudinary'
 import { formatDate } from '@utils/formatDate'
 import type { ArticleSchema } from '../schemas/articleSchema'
-import { getCloudinaryUrl, getPredominantColor } from '@utils/cloudinary'
 
 export interface Props {
   url: string
@@ -21,22 +21,22 @@ const background = await getPredominantColor(frontmatter.image.url)
 ---
 
 <article
-  class='bg-base-200 rounded outline outline-transparent outline-offset-0
-  hover:outline-offset-4 hover:outline-secondary transition-all px-5'
+  class="bg-base-200 rounded outline outline-transparent outline-offset-0
+  hover:outline-offset-4 hover:outline-secondary transition-all px-5"
 >
-  <a href={url} class='no-underline block' data-astro-prefetch>
-    <div class='grid md:grid-cols-2 gap-4'>
-      <div class='text-base-content outline-0'>
-        <h2 class='no-underline'>{frontmatter.title}</h2>
-        <h3 class='no-underline text-accent italic font-thin text-md'>
+  <a href={url} class="no-underline block" data-astro-prefetch>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="text-base-content outline-0">
+        <h2 class="no-underline">{frontmatter.title}</h2>
+        <h3 class="no-underline text-accent italic font-thin text-md">
           {formatDate(frontmatter.pubDate)}
         </h3>
         <p>{frontmatter.description}</p>
       </div>
 
-      <div class='flex items-center justify-center'>
+      <div class="flex items-center justify-center">
         <div
-          class='aspect-video max-w-[400px] mb-5 w-full rounded-sm'
+          class="aspect-video max-w-[400px] mb-5 w-full rounded-sm"
           style={{
             background,
             backgroundImage: `url('${getCloudinaryUrl(frontmatter.image.url, {
@@ -52,9 +52,9 @@ const background = await getPredominantColor(frontmatter.image.url)
           <img
             src={thumbnail}
             alt={frontmatter.image.alt}
-            class='rounded-sm opacity-0 transition-opacity article-image'
-            loading='lazy'
-          />
+            class="rounded-sm opacity-0 transition-opacity article-image"
+            loading="lazy"
+          >
         </div>
       </div>
     </div>

@@ -22,7 +22,7 @@ const background = await getPredominantColor(frontmatter.image.url)
   })}
 >
   <div
-    class='max-w-[800px] mx-auto aspect-video mb-10 w-full bg-base-100 rounded-sm'
+    class="max-w-[800px] mx-auto aspect-video mb-10 w-full bg-base-100 rounded-sm"
     style={{
       background,
       backgroundImage: `url('${getCloudinaryUrl(frontmatter.image.url, {
@@ -35,9 +35,8 @@ const background = await getPredominantColor(frontmatter.image.url)
       backgroundSize: 'cover',
     }}
   >
-    <picture class='m-0'>
-      {
-        sizes.map((size) => (
+    <picture class="m-0">
+      {sizes.map((size) => (
           <source
             media={`( max-width: ${size}px )`}
             srcset={getCloudinaryUrl(frontmatter.image.url, {
@@ -47,8 +46,7 @@ const background = await getPredominantColor(frontmatter.image.url)
               crop: 'fill',
             })}
           />
-        ))
-      }
+        ))}
       <img
         src={getCloudinaryUrl(frontmatter.image.url, {
           width: 800,
@@ -56,10 +54,10 @@ const background = await getPredominantColor(frontmatter.image.url)
           aspect_ratio: '16:9',
           crop: 'fill',
         })}
-        class='aspect-video mt-0 w-full opacity-0 transition-opacity'
+        class="aspect-video mt-0 w-full opacity-0 transition-opacity"
         alt={frontmatter.image.alt}
-        id='main-img'
-      />
+        id="main-img"
+      >
     </picture>
   </div>
   <h1>{frontmatter.title}</h1>
@@ -67,8 +65,8 @@ const background = await getPredominantColor(frontmatter.image.url)
 </Layout>
 
 <script>
-  import { transitionImage } from '@utils/domUtils'
+import { transitionImage } from '@utils/domUtils'
 
-  const image = document.getElementById('main-img') as HTMLImageElement
-  transitionImage(image)
+const image = document.getElementById('main-img') as HTMLImageElement
+transitionImage(image)
 </script>

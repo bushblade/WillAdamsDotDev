@@ -3,60 +3,62 @@ import Layout from '@layouts/Layout.astro'
 ---
 
 <Layout
-  title='WillAdamsDotDev'
-  metaDescription='UK based developer and knife maker'
-  metaImage='https://res.cloudinary.com/bushblade/image/upload/c_scale,w_1200/f_webp/q_auto/bushbladedotdev/ogimage.jpg'
+  title="WillAdamsDotDev"
+  metaDescription="UK based developer and knife maker"
+  metaImage="https://res.cloudinary.com/bushblade/image/upload/c_scale,w_1200/f_webp/q_auto/bushbladedotdev/ogimage.jpg"
 >
-  <div class=''>
-    <h1 class='text-5xl font-bold'>
-      Hi there<span class='text-accent'>,</span> I<span class='text-secondary'
-        >'</span
-      >m <span class='text-primary'>Will</span><span class='inline-block ml-3'>
-        👋</span
-      >
+  <div class="">
+    <h1 class="text-5xl font-bold">
+      Hi there<span class="text-accent">,</span>
+      I<span class="text-secondary">'</span>m
+      <span class="text-primary">Will</span
+      ><span class="inline-block ml-3"> 👋</span>
     </h1>
-    <p class='py-5 text-xl my-2'>
+    <p class="py-5 text-xl my-2">
       Im a UK based developer, knife maker, father, bushcrafter and climber.
-      Just autistically <a
-        href='https://www.urbandictionary.com/define.php?term=Bimbling'
-        target='_blank'>bimbling</a
-      > my way through life.
+      Just autistically
+      <a
+        href="https://www.urbandictionary.com/define.php?term=Bimbling"
+        target="_blank"
+        >bimbling</a
+      >
+      my way through life.
     </p>
   </div>
 </Layout>
 
 <style>
-  h1 > span:hover {
-    animation-name: wave;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
-    transform-origin: 70% 70%;
-  }
+h1 > span:hover {
+  animation-name: wave;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+}
 
-  @keyframes wave {
-    0% {
-      transform: rotate(0deg);
-    }
-    10% {
-      transform: rotate(14deg);
-    }
-    20% {
-      transform: rotate(-8deg);
-    }
-    30% {
-      transform: rotate(14deg);
-    }
-    40% {
-      transform: rotate(-4deg);
-    }
-    50% {
-      transform: rotate(10deg);
-    }
-    60% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
   }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 </style>
