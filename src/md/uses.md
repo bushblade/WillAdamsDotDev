@@ -20,21 +20,17 @@ Inspired by [Wes Bos](https://wesbos.com/) and [uses.tech](https://uses.tech/), 
 - **Monitor** [LG 34WQ75C](https://www.lg.com/uk/monitors/ultrawide/34wq75c-b/)
 - **Chair** [Boulies Elite](https://boulies.co.uk/products/elite-series)
 - **Headset** [Steel Series Arctis Nova 7](https://steelseries.com/en-gb/gaming-headsets/arctis-nova-7?color=black&primaryPlatform=pc)
-- **Phone** [Google Pixel 8](https://store.google.com/gb/product/pixel_8?hl=en-GB)
+- **Phone** [Google Pixel 10 Pro XL](https://store.google.com/gb/product/pixel_8?hl=en-GB)
 - **Watch** [Garmin Fenix 7 Sapphire Solar](https://www.garmin.com/en-GB/p/735520)
 
 ## Software
 
 - **Terminal** [Ghostty](https://ghostty.org/) with [Fish](https://fishshell.com/) shell and [Starship](https://starship.rs/) prompt. Paired with [Tmux](https://github.com/tmux/tmux) for splits/multiplexxing.
 - **Editor** [Neovim](https://neovim.io/) - [config here](https://github.com/bushblade/nvim)
-- **Gnome Extensions**
-  - [PaperWM](https://extensions.gnome.org/extension/6099/paperwm/) Tiling window manager with a twist
-  - [VShell](https://extensions.gnome.org/extension/5177/vertical-workspaces/) Vertical workspace layout and overview
 - **Command line tools**
   - [LazyGit](https://github.com/jesseduffield/lazygit) - version control
-  - [nnn](https://github.com/jarun/nnn) - file manager
   - [Yazi](https://github.com/sxyazi/yazi) - file manager
-  - [Gemini CLI](https://github.com/google-gemini/gemini-cli)
+  - [opencode](https://opencode.ai/) - Open source AI coding agent
   - More in my [dotfiles](https://github.com/bushblade/dotfiles) here
 
 ## Podcasts
