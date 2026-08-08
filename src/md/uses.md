@@ -12,6 +12,8 @@ author: 'Will Adams'
 
 Inspired by [Wes Bos](https://wesbos.com/) and [uses.tech](https://uses.tech/), here is a list of some of the tech related things I use on a regular basis.
 
+I build and maintain this site with [OpenCode](https://opencode.ai/) running inside [Herdr](https://herdr.dev/), a terminal multiplexer that organises my coding agents.
+
 ## Hardware
 
 - **Desktop** Ryzen 5 5600x CPU, Radeon RX7600 GPU, 32gb RAM running [CachyOS](https://cachyos.org/) with the [Dank Material Shell](https://danklinux.com/) and [Niri](https://yalter.github.io/niri/) window manager.
@@ -31,6 +33,7 @@ Inspired by [Wes Bos](https://wesbos.com/) and [uses.tech](https://uses.tech/), 
   - [LazyGit](https://github.com/jesseduffield/lazygit) - version control
   - [Yazi](https://github.com/sxyazi/yazi) - file manager
   - [opencode](https://opencode.ai/) - Open source AI coding agent
+  - [herdr](https://herdr.dev/) - Terminal multiplexer for coding agents
   - More in my [dotfiles](https://github.com/bushblade/dotfiles) here
 
 ## Podcasts
