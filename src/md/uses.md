@@ -12,7 +12,6 @@ author: 'Will Adams'
 
 Inspired by [Wes Bos](https://wesbos.com/) and [uses.tech](https://uses.tech/), here is a list of some of the tech related things I use on a regular basis.
 
-I build and maintain this site with [OpenCode](https://opencode.ai/) running inside [Herdr](https://herdr.dev/), a terminal multiplexer that organises my coding agents.
 
 ## Hardware
 
@@ -32,7 +31,7 @@ I build and maintain this site with [OpenCode](https://opencode.ai/) running ins
 - **Command line tools**
   - [LazyGit](https://github.com/jesseduffield/lazygit) - version control
   - [Yazi](https://github.com/sxyazi/yazi) - file manager
-  - [opencode](https://opencode.ai/) - Open source AI coding agent
+  - [OpenCode](https://opencode.ai/go?ref=A05S7GQA40) - Open source AI coding agent 
   - [herdr](https://herdr.dev/) - Terminal multiplexer for coding agents
   - More in my [dotfiles](https://github.com/bushblade/dotfiles) here
 
