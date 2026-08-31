@@ -7,21 +7,9 @@ const tech = {
     url: 'https://www.typescriptlang.org/',
     text: 'TypeScript',
   },
-  gatsby: {
-    url: 'https://www.gatsbyjs.com/',
-    text: 'Gatsby',
-  },
   astro: {
     url: 'https://astro.build',
     text: 'Astro',
-  },
-  styledComponents: {
-    url: 'https://styled-components.com/',
-    text: 'Styled Components',
-  },
-  reactSpring: {
-    url: 'https://www.react-spring.dev/',
-    text: 'React Spring',
   },
   vite: {
     url: 'https://vitejs.dev/',
@@ -89,13 +77,13 @@ const tech = {
   <ProjectCard
     url="https://www.westyorkshirebushcraft.co.uk/"
     title="West Yorkshire Bushcraft Website"
-    repo="https://github.com/bushblade/WYB"
-    tech={[tech.gatsby, tech.reactSpring, tech.netlify]}
+    repo="https://github.com/bushblade/WestYorkshireBushcraftAstro"
+    tech={[tech.astro, tech.typeScript, tech.gsap, tech.netlify]}
     image="bushbladedotdev/wyb-website"
   >
     Built for my Bushcraft group to show the sort of things we get up to and
-    help people find us. Built using Gatsby and Styled Components, animations
-    with React Spring and continuous deployment to Netlify through GitHub.
+    help people find us. Recently rebuilt using Astro with vanilla TypeScript,
+    animations with GSAP and continuous deployment to Netlify through GitHub.
   </ProjectCard>
 
   <ProjectCard
